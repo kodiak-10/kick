@@ -1,0 +1,15 @@
+AI Coach Report
+Generated at: 2026-03-14 23:12:24
+Duration: 105.6 s
+
+Exercise: squat
+  Reps: 1
+  Avg angle: 168.6
+  Errors: 0
+
+Exercise: pushup
+  Reps: 0
+  Avg angle: 109.0
+  Errors: 0
+
+Suggestions:

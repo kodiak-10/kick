@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dynamics",
+  "type": "object",
+  "required": ["clip_id", "subject", "vGRF", "joint_torques", "model_version", "generated_at", "frame_count"],
+  "properties": {
+    "clip_id": {"type": "string"},
+    "subject": {
+      "type": "object",
+      "required": ["id", "mass_kg", "height_m"],
+      "properties": {
+        "id": {"type": "string"},
+        "mass_kg": {"type": "number"},
+        "height_m": {"type": "number"}
+      }
+    },
+    "vGRF": {
+      "type": "object",
+      "required": ["file", "units", "sampling_fps"],
+      "properties": {
+        "file": {"type": "string"},
+        "units": {"type": "string"},
+        "sampling_fps": {"type": "number"}
+      }
+    },
+    "joint_torques": {
+      "type": "object",
+      "required": ["units", "notes"],
+      "properties": {
+        "units": {"type": "string"},
+        "notes": {"type": "string"}
+      }
+    },
+    "model_version": {"type": "string"},
+    "generated_at": {"type": "string"},
+    "frame_count": {"type": "integer"}
+  }
+}

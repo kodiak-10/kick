@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RawMeta",
+  "type": "object",
+  "required": ["clip_id", "filename", "fps", "resolution", "orientation"],
+  "properties": {
+    "clip_id": {"type": "string"},
+    "filename": {"type": "string"},
+    "fps": {"type": "number"},
+    "resolution": {"type": "array", "items": {"type": "integer"}},
+    "orientation": {"type": "string"}
+  }
+}

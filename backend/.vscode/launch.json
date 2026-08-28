@@ -1,0 +1,99 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "AI Coach: Live Soccer (Cam 0)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/coach.py",
+      "console": "integratedTerminal",
+      "args": [
+        "--mode",
+        "live",
+        "--camera_index",
+        "0",
+        "--sport_mode",
+        "soccer_basic"
+      ]
+    },
+    {
+      "name": "AI Coach: Calibrate (Cam 0)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/coach.py",
+      "console": "integratedTerminal",
+      "args": [
+        "--mode",
+        "calibrate",
+        "--camera_index",
+        "0",
+        "--user_height_m",
+        "1.75",
+        "--calibration_path",
+        "calibration/user_profile.json"
+      ]
+    },
+    {
+      "name": "AI Coach: Live Soccer Calibrated (Cam 0)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/coach.py",
+      "console": "integratedTerminal",
+      "args": [
+        "--mode",
+        "live",
+        "--camera_index",
+        "0",
+        "--sport_mode",
+        "soccer_basic",
+        "--calibration_path",
+        "calibration/user_profile.json"
+      ]
+    },
+    {
+      "name": "AI Coach: Collect Data (Cam 0)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/coach.py",
+      "console": "integratedTerminal",
+      "args": [
+        "--mode",
+        "collect",
+        "--camera_index",
+        "0",
+        "--collect_dir",
+        "captured"
+      ]
+    },
+    {
+      "name": "AI Coach: Offline Demo",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/coach.py",
+      "console": "integratedTerminal",
+      "args": [
+        "--mode",
+        "offline",
+        "--clip_id",
+        "sample01",
+        "--repo_path",
+        "${workspaceFolder}"
+      ]
+    },
+    {
+      "name": "AI Coach: Analyze Video",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/coach.py",
+      "console": "integratedTerminal",
+      "args": [
+        "--mode",
+        "analyze_video",
+        "--repo_path",
+        "${workspaceFolder}",
+        "--video_path",
+        "${workspaceFolder}/videos/传球.mp4"
+      ]
+    }
+  ]
+}

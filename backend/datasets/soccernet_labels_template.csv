@@ -1,0 +1,2 @@
+clip_id,video_path,action,start_ms,end_ms,fps,split
+match1_half1_0001,VIDEOS/game1/1.mp4,Pass,123000,125000,25,train

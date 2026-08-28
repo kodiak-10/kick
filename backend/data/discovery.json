@@ -1,0 +1,315 @@
+{
+  "posts": [
+    {
+      "id": "post-f3531248528c",
+      "user_id": "kickai-demo-user",
+      "user_name": "KickAI 用户",
+      "region": "重庆 · 沙坪坝",
+      "badge": "同城约练",
+      "title": "111",
+      "body": "1",
+      "visibility": "public",
+      "analysis_result_id": null,
+      "ai_reply": "Kick AI：已收到这条训练讨论。后续会结合你的分析报告生成更具体的训练建议。",
+      "likes": 8,
+      "comment_count": 0,
+      "created_at": "2026-06-08T07:01:10.887725+00:00",
+      "updated_at": null
+    },
+    {
+      "id": "post-732f3d930f16",
+      "user_id": "kickai-demo-user",
+      "user_name": "KickAI 用户",
+      "region": "重庆 · 沙坪坝",
+      "badge": "同城约练",
+      "title": "今晚有人一起练传球和射门吗？",
+      "body": "刚完成一次 KickAI 分析，想找同城球友一起按问题点训练。",
+      "visibility": "public",
+      "analysis_result_id": null,
+      "ai_reply": "Kick AI：已收到这条训练讨论。后续会结合你的分析报告生成更具体的训练建议。",
+      "likes": 0,
+      "comment_count": 0,
+      "created_at": "2026-06-08T07:00:44.731712+00:00",
+      "updated_at": null
+    },
+    {
+      "id": "post-86e8753db917",
+      "user_id": "kickai-demo-user",
+      "user_name": "KickAI 用户",
+      "region": "重庆 · 沙坪坝",
+      "badge": "同城约练",
+      "title": "今晚有人一起练传球和射门吗？",
+      "body": "刚完成一次 KickAI 分析，想找同城球友一起按问题点训练。",
+      "visibility": "public",
+      "analysis_result_id": null,
+      "ai_reply": "Kick AI：已收到这条训练讨论。后续会结合你的分析报告生成更具体的训练建议。",
+      "likes": 0,
+      "comment_count": 0,
+      "created_at": "2026-06-08T07:00:43.704133+00:00",
+      "updated_at": null
+    },
+    {
+      "id": "post-503f1ef52eb3",
+      "user_id": "kickai-demo-user",
+      "user_name": "KickAI 用户",
+      "region": "重庆 · 沙坪坝",
+      "badge": "同城约练",
+      "title": "今晚有人一起练传球和射门吗？",
+      "body": "刚完成一次 KickAI 分析，想找同城球友一起按问题点训练。",
+      "visibility": "public",
+      "analysis_result_id": null,
+      "ai_reply": "Kick AI：已收到这条训练讨论。后续会结合你的分析报告生成更具体的训练建议。",
+      "likes": 0,
+      "comment_count": 0,
+      "created_at": "2026-06-08T07:00:41.432634+00:00",
+      "updated_at": null
+    },
+    {
+      "id": "post-956af2a17f4e",
+      "user_name": "KickAI 用户",
+      "region": "重庆 · 沙坪坝",
+      "badge": "同城约练",
+      "title": "今晚有人一起练传球和射门吗？",
+      "body": "刚完成一次 KickAI 分析，想找同城球友一起按问题点训练。",
+      "analysis_result_id": null,
+      "ai_reply": "Kick AI：已收到这条训练讨论。后续会结合你的分析报告生成更具体的训练建议。",
+      "likes": 0,
+      "comment_count": 0,
+      "created_at": "2026-06-07T18:38:06.693561+00:00"
+    },
+    {
+      "id": "post-ed7993d0eab5",
+      "user_name": "KickAI 用户",
+      "region": "重庆 · 沙坪坝",
+      "badge": "同城约练",
+      "title": "今晚有人一起练传球和射门吗？",
+      "body": "刚完成一次 KickAI 分析，想找同城球友一起按问题点训练。",
+      "analysis_result_id": null,
+      "ai_reply": "Kick AI：已收到这条训练讨论。后续会结合你的分析报告生成更具体的训练建议。",
+      "likes": 0,
+      "comment_count": 0,
+      "created_at": "2026-06-07T18:38:05.675971+00:00"
+    },
+    {
+      "id": "post-1eaadf744f78",
+      "user_name": "KickAI 用户",
+      "region": "重庆 · 沙坪坝",
+      "badge": "同城约练",
+      "title": "今晚有人一起练传球和射门吗？",
+      "body": "刚完成一次 KickAI 分析，想找同城球友一起按问题点训练。",
+      "analysis_result_id": null,
+      "ai_reply": "Kick AI：已收到这条训练讨论。后续会结合你的分析报告生成更具体的训练建议。",
+      "likes": 0,
+      "comment_count": 0,
+      "created_at": "2026-06-07T18:38:01.751426+00:00"
+    },
+    {
+      "id": "post-c8fd4ca9618f",
+      "user_name": "匿名球友",
+      "region": "重庆 · 沙坪坝",
+      "badge": "验证",
+      "title": "定位修复后发帖验证",
+      "body": "确认 discovery 发帖接口可用。",
+      "analysis_result_id": null,
+      "ai_reply": "Kick AI：已收到这条训练讨论。后续会结合你的分析报告生成更具体的训练建议。",
+      "likes": 1,
+      "comment_count": 0,
+      "created_at": "2026-06-07T17:43:58.788086+00:00"
+    },
+    {
+      "id": "post-e2688e4f1956",
+      "user_name": "匿名球友",
+      "region": "重庆 · 沙坪坝",
+      "badge": "验证",
+      "title": "终端验证发帖",
+      "body": "这条用于确认 App 发帖 404 已修复。",
+      "analysis_result_id": null,
+      "ai_reply": "Kick AI：已收到这条训练讨论。后续会结合你的分析报告生成更具体的训练建议。",
+      "likes": 0,
+      "comment_count": 0,
+      "created_at": "2026-06-07T16:55:03.762988+00:00"
+    },
+    {
+      "id": "seed-pass-support-foot",
+      "user_name": "沙坪坝 7 号",
+      "region": "重庆 · 沙坪坝",
+      "badge": "传球 · 支撑脚",
+      "title": "支撑脚老是偏外，怎么练？",
+      "body": "上传了两段短传，系统提示支撑脚方向和出球线路不一致。",
+      "ai_reply": "Kick AI：先做 8 米墙传，支撑脚脚尖固定朝目标，每组 20 次。",
+      "likes": 12,
+      "comment_count": 3,
+      "created_at": "2026-06-07T14:35:15.870657+00:00"
+    },
+    {
+      "id": "seed-shot-power-chain",
+      "user_name": "左脚想开窍",
+      "region": "重庆",
+      "badge": "射门 · 发力链",
+      "title": "射门发力总是散",
+      "body": "触球前身体后仰，球容易飘高，想找同城队友一起练。",
+      "ai_reply": "Kick AI：优先看支撑脚落点和髋部带动，不要只加大摆腿。",
+      "likes": 8,
+      "comment_count": 1,
+      "created_at": "2026-06-07T14:35:15.870664+00:00"
+    }
+  ],
+  "comments": {},
+  "venue_corrections": [],
+  "coaches": [
+    {
+      "id": "coach-technique-online",
+      "name": "技术动作私教",
+      "region": "全国线上",
+      "specialty": "传球 / 射门纠错",
+      "price_text": "¥99 起",
+      "description": "看你的分析报告，给 1 次线上动作点评和 1 组针对训练。",
+      "rating": 4.8,
+      "verified": true
+    },
+    {
+      "id": "coach-chongqing-local",
+      "name": "重庆同城场地陪练",
+      "region": "重庆",
+      "specialty": "支撑脚、触球面、发力链",
+      "price_text": "¥199 起",
+      "description": "适合需要线下纠正支撑脚、触球面和射门发力链的用户。",
+      "rating": 4.7,
+      "verified": false
+    }
+  ],
+  "bookings": [
+    {
+      "id": "booking-ad2cbde166fc",
+      "coach_id": "coach-technique-online",
+      "coach_name": "技术动作私教",
+      "user_name": "KickAI 用户",
+      "contact": "demo@kick.local",
+      "region": "重庆 · 沙坪坝",
+      "goal": "希望教练基于我的传球/射门分析报告，做一次一对一动作纠错。",
+      "preferred_time": "本周内",
+      "analysis_result_id": null,
+      "status": "pending_contact",
+      "created_at": "2026-06-08T07:00:30.345650+00:00"
+    },
+    {
+      "id": "booking-b01b88bb99d2",
+      "coach_id": "coach-technique-online",
+      "coach_name": "技术动作私教",
+      "user_name": "KickAI 用户",
+      "contact": "demo@kick.local",
+      "region": "重庆 · 沙坪坝",
+      "goal": "希望教练基于我的传球/射门分析报告，做一次一对一动作纠错。",
+      "preferred_time": "本周内",
+      "analysis_result_id": null,
+      "status": "pending_contact",
+      "created_at": "2026-06-07T18:37:45.249826+00:00"
+    }
+  ],
+  "coach_conversations": [
+    {
+      "id": "coach-chat-6d8a10d97bbe",
+      "coach_id": "coach-technique-online",
+      "coach_name": "技术动作私教",
+      "user_id": "kickai-demo-user",
+      "user_name": "KickAI 用户",
+      "region": "重庆 · 沙坪坝",
+      "analysis_result_id": null,
+      "status": "open",
+      "created_at": "2026-06-08T02:21:11.356694+00:00",
+      "updated_at": "2026-08-27T08:49:35.673213+00:00",
+      "messages": [
+        {
+          "id": "msg-ec74d6711829",
+          "conversation_id": "coach-chat-6d8a10d97bbe",
+          "sender_id": "coach-system",
+          "sender_name": "技术动作私教",
+          "role": "coach",
+          "body": "你好，我已经收到你的私教咨询。你可以把本次分析报告的问题点、想提升的动作和方便训练时间发给我。",
+          "created_at": "2026-06-08T02:21:11.356694+00:00"
+        },
+        {
+          "id": "msg-0bd81f90e76a",
+          "conversation_id": "coach-chat-6d8a10d97bbe",
+          "sender_id": "kickai-demo-user",
+          "sender_name": "KickAI 用户",
+          "role": "user",
+          "body": "测试私教聊天链路",
+          "created_at": "2026-06-08T02:21:11.356730+00:00"
+        },
+        {
+          "id": "msg-6b0952bb3fee",
+          "conversation_id": "coach-chat-6d8a10d97bbe",
+          "sender_id": "kickai-demo-user",
+          "sender_name": "KickAI 用户",
+          "role": "user",
+          "body": "第二条消息测试",
+          "created_at": "2026-06-08T02:27:41.768615+00:00"
+        },
+        {
+          "id": "msg-23e36ff92072",
+          "conversation_id": "coach-chat-6d8a10d97bbe",
+          "sender_id": "kickai-demo-user",
+          "sender_name": "KickAI 用户",
+          "role": "user",
+          "body": "我想基于 KickAI 的动作分析报告做一次一对一纠错，请先帮我看最适合怎么练。",
+          "created_at": "2026-06-09T15:43:47.543877+00:00"
+        },
+        {
+          "id": "msg-d3f333f5eb09",
+          "conversation_id": "coach-chat-6d8a10d97bbe",
+          "sender_id": "kickai-demo-user",
+          "sender_name": "KickAI 用户",
+          "role": "user",
+          "body": "您好，请问线上咨询一次怎么收费？",
+          "created_at": "2026-06-09T15:44:17.865605+00:00"
+        },
+        {
+          "id": "msg-cc4e4d3777a4",
+          "conversation_id": "coach-chat-6d8a10d97bbe",
+          "sender_id": "kickai-demo-user",
+          "sender_name": "KickAI 用户",
+          "role": "user",
+          "body": "我想基于 KickAI 的动作分析报告做一次一对一纠错，请先帮我看最适合怎么练。",
+          "created_at": "2026-07-03T13:46:57.667174+00:00"
+        },
+        {
+          "id": "msg-c3fdae022d22",
+          "conversation_id": "coach-chat-6d8a10d97bbe",
+          "sender_id": "kickai-demo-user",
+          "sender_name": "KickAI 用户",
+          "role": "user",
+          "body": "收费问题",
+          "created_at": "2026-07-03T13:47:18.834043+00:00"
+        },
+        {
+          "id": "msg-ce6944fad5f4",
+          "conversation_id": "coach-chat-6d8a10d97bbe",
+          "sender_id": "kickai-demo-user",
+          "sender_name": "KickAI 用户",
+          "role": "user",
+          "body": "我想基于 KickAI 的动作分析报告做一次一对一纠错，请先帮我看最适合怎么练。",
+          "created_at": "2026-08-27T07:57:24.916473+00:00"
+        },
+        {
+          "id": "msg-c6d7c838721f",
+          "conversation_id": "coach-chat-6d8a10d97bbe",
+          "sender_id": "kickai-demo-user",
+          "sender_name": "KickAI 用户",
+          "role": "user",
+          "body": "我想基于 KickAI 的动作分析报告做一次一对一纠错，请先帮我看最适合怎么练。",
+          "created_at": "2026-08-27T08:42:06.152274+00:00"
+        },
+        {
+          "id": "msg-921030861eff",
+          "conversation_id": "coach-chat-6d8a10d97bbe",
+          "sender_id": "kickai-demo-user",
+          "sender_name": "KickAI 用户",
+          "role": "user",
+          "body": "我想基于 KickAI 的动作分析报告做一次一对一纠错，请先帮我看最适合怎么练。",
+          "created_at": "2026-08-27T08:49:35.673191+00:00"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,682 @@
+{
+  "meta": {
+    "project": "Kick AI",
+    "version": "v1",
+    "camera_setup": "single_camera",
+    "wearables": false,
+    "target_users": ["beginner", "amateur"],
+    "scoring_principle": "outcome_first_technique_second"
+  },
+  "global_quality_gate": {
+    "source_class": "product_default",
+    "min_video_fps_outcome": 30,
+    "min_video_fps_technique": 60,
+    "min_pose_visibility": 0.75,
+    "min_pose_presence": 0.75,
+    "min_visible_frame_ratio": 0.85,
+    "max_ball_track_missing_ratio": 0.1,
+    "degrade_policy": {
+      "if_quality_fail": [
+        "hide_micro_technique_score",
+        "keep_outcome_metrics_only",
+        "show_reshoot_hint"
+      ]
+    }
+  },
+  "actions": {
+    "shot_instep": {
+      "display_name": "射门",
+      "trials": 5,
+      "primary_metrics": {
+        "max_ball_speed_mps": {
+          "source_class": "literature_inspired",
+          "use_as": "main_score",
+          "direction": "higher_is_better",
+          "improvement_claim_min_delta_mps": 2.5,
+          "beginner_reference": {
+            "excellent_min": 22.0,
+            "good_min": 18.0,
+            "needs_work_below": 14.0
+          },
+          "amateur_reference": {
+            "excellent_min": 26.0,
+            "good_min": 21.0,
+            "needs_work_below": 17.0
+          }
+        },
+        "target_zone_hit": {
+          "source_class": "product_default",
+          "use_as": "accuracy_score",
+          "zones": {
+            "miss": 0,
+            "outer": 1,
+            "mid": 2,
+            "corner": 3
+          }
+        },
+        "shot_consistency_cv_pct": {
+          "source_class": "product_default",
+          "use_as": "consistency_score",
+          "direction": "lower_is_better",
+          "excellent_max": 10,
+          "good_max": 20,
+          "poor_over": 30
+        }
+      },
+      "secondary_metrics": {
+        "support_foot_lateral_offset_cm": {
+          "source_class": "product_default",
+          "use_as": "diagnostic_only",
+          "soft_bands": [15, 25, 35]
+        },
+        "support_foot_ap_offset_cm": {
+          "source_class": "product_default",
+          "use_as": "diagnostic_only",
+          "soft_bands": [-10, 0, 10]
+        },
+        "trunk_lean_deg_at_impact_proxy": {
+          "source_class": "product_default",
+          "use_as": "diagnostic_only",
+          "soft_bands": [5, 15, 25]
+        }
+      },
+      "score_weights": {
+        "beginner": {
+          "ball_speed": 0.55,
+          "accuracy": 0.25,
+          "consistency": 0.20
+        },
+        "amateur": {
+          "ball_speed": 0.45,
+          "accuracy": 0.35,
+          "consistency": 0.20
+        }
+      },
+      "hard_fail_rules": [
+        "ball_not_detected",
+        "kick_event_not_detected",
+        "video_quality_fail"
+      ]
+    },
+    "short_pass": {
+      "display_name": "传球",
+      "protocol": "fixed_target_pass",
+      "primary_metrics": {
+        "endpoint_error_m": {
+          "source_class": "product_default",
+          "direction": "lower_is_better",
+          "beginner_thresholds": {
+            "excellent_max": 0.25,
+            "good_max": 0.50,
+            "poor_over": 1.00
+          },
+          "amateur_thresholds": {
+            "excellent_max": 0.20,
+            "good_max": 0.40,
+            "poor_over": 0.80
+          }
+        },
+        "execution_time_s": {
+          "source_class": "literature_inspired",
+          "direction": "lower_is_better",
+          "beginner_thresholds": {
+            "excellent_max": 2.0,
+            "good_max": 3.0,
+            "poor_over": 4.0
+          },
+          "amateur_thresholds": {
+            "excellent_max": 1.5,
+            "good_max": 2.4,
+            "poor_over": 3.2
+          }
+        },
+        "penalty_events": {
+          "source_class": "literature_inspired",
+          "direction": "lower_is_better",
+          "types": ["miss_target", "extra_touch", "pass_from_outside_area", "ball_out_of_lane"],
+          "beginner_thresholds": {
+            "excellent_max": 0,
+            "good_max": 1,
+            "poor_over": 2
+          },
+          "amateur_thresholds": {
+            "excellent_max": 0,
+            "good_max": 1,
+            "poor_over": 1
+          }
+        }
+      },
+      "secondary_metrics": {
+        "plant_foot_orientation_deg": {
+          "source_class": "product_default",
+          "use_as": "diagnostic_only",
+          "soft_bands": [10, 20, 30]
+        },
+        "body_open_angle_deg_before_pass": {
+          "source_class": "product_default",
+          "use_as": "diagnostic_only",
+          "soft_bands": [20, 40, 60]
+        }
+      },
+      "score_weights": {
+        "beginner": {
+          "endpoint_error": 0.45,
+          "execution_time": 0.30,
+          "penalty_events": 0.25
+        },
+        "amateur": {
+          "endpoint_error": 0.40,
+          "execution_time": 0.35,
+          "penalty_events": 0.25
+        }
+      }
+    },
+    "stop_ball": {
+      "display_name": "停球",
+      "primary_metrics": {
+        "control_zone_success_rate": {
+          "source_class": "product_default",
+          "definition": "first_touch_keeps_ball_in_playable_zone",
+          "beginner_thresholds": {
+            "excellent": 0.80,
+            "good": 0.60,
+            "needs_work": 0.40
+          },
+          "amateur_thresholds": {
+            "excellent": 0.90,
+            "good": 0.75,
+            "needs_work": 0.55
+          }
+        },
+        "stabilization_time_s": {
+          "source_class": "product_default",
+          "direction": "lower_is_better",
+          "beginner_thresholds": {
+            "excellent_max": 1.0,
+            "good_max": 1.4,
+            "poor_over": 1.8
+          },
+          "amateur_thresholds": {
+            "excellent_max": 0.8,
+            "good_max": 1.1,
+            "poor_over": 1.5
+          }
+        },
+        "corrective_touch_count": {
+          "source_class": "product_default",
+          "direction": "lower_is_better",
+          "beginner_thresholds": {
+            "excellent_max": 0,
+            "good_max": 1,
+            "poor_over": 2
+          },
+          "amateur_thresholds": {
+            "excellent_max": 0,
+            "good_max": 1,
+            "poor_over": 1
+          }
+        },
+        "first_touch_displacement_m": {
+          "source_class": "product_default",
+          "direction": "lower_is_better",
+          "beginner_thresholds": {
+            "excellent_max": 0.8,
+            "good_max": 1.2,
+            "poor_over": 1.5
+          },
+          "amateur_thresholds": {
+            "excellent_max": 0.6,
+            "good_max": 1.0,
+            "poor_over": 1.3
+          }
+        }
+      },
+      "secondary_metrics": {
+        "body_orientation_to_ball_deg": {
+          "source_class": "product_default",
+          "use_as": "diagnostic_only",
+          "soft_bands": [15, 30, 45]
+        },
+        "recenter_time_s": {
+          "source_class": "product_default",
+          "use_as": "diagnostic_only",
+          "soft_bands": [0.5, 1.0, 1.5]
+        }
+      },
+      "hard_fail_rules": [
+        "ball_leaves_playable_zone",
+        "ball_stops_behind_body_line",
+        "next_action_not_possible",
+        "video_quality_fail"
+      ],
+      "score_weights": {
+        "beginner": {
+          "control_zone_success_rate": 0.40,
+          "stabilization_time": 0.30,
+          "corrective_touch_count": 0.20,
+          "first_touch_displacement": 0.10
+        },
+        "amateur": {
+          "control_zone_success_rate": 0.45,
+          "stabilization_time": 0.25,
+          "corrective_touch_count": 0.20,
+          "first_touch_displacement": 0.10
+        }
+      }
+    },
+    "receive_control": {
+      "display_name": "接球",
+      "paper_protocol": {
+        "source_class": "paper_protocol",
+        "player_to_server_distance_m": 8.0,
+        "ground_ball_speed_kmh": 19.0,
+        "ground_ball_speed_tolerance_kmh": 0.5,
+        "air_ball_height_m": 0.2,
+        "air_ball_speed_kmh": 31.0,
+        "air_ball_speed_tolerance_kmh": 1.2,
+        "control_zone_width_m": 1.0,
+        "control_zone_depth_m": 1.5,
+        "ground_trials": 10,
+        "air_trials": 10,
+        "instruction": "one_touch_receive_then_one_touch_return"
+      },
+      "primary_metrics": {
+        "control_zone_success_rate": {
+          "source_class": "literature_inspired",
+          "beginner_thresholds": {
+            "excellent": 0.80,
+            "good": 0.60,
+            "needs_work": 0.40
+          },
+          "amateur_thresholds": {
+            "excellent": 0.90,
+            "good": 0.75,
+            "needs_work": 0.55
+          }
+        },
+        "stabilization_time_s": {
+          "source_class": "product_default",
+          "beginner_thresholds": {
+            "excellent_max": 1.0,
+            "good_max": 1.4,
+            "poor_over": 1.8
+          },
+          "amateur_thresholds": {
+            "excellent_max": 0.8,
+            "good_max": 1.1,
+            "poor_over": 1.5
+          }
+        },
+        "corrective_touch_count": {
+          "source_class": "product_default",
+          "beginner_thresholds": {
+            "excellent_max": 0,
+            "good_max": 1,
+            "poor_over": 2
+          },
+          "amateur_thresholds": {
+            "excellent_max": 0,
+            "good_max": 1,
+            "poor_over": 1
+          }
+        },
+        "lateral_offset_m": {
+          "source_class": "product_default",
+          "beginner_thresholds": {
+            "excellent_max": 0.30,
+            "good_max": 0.45,
+            "poor_over": 0.50
+          },
+          "amateur_thresholds": {
+            "excellent_max": 0.25,
+            "good_max": 0.40,
+            "poor_over": 0.50
+          }
+        }
+      },
+      "secondary_metrics": {
+        "body_open_angle_deg": {
+          "source_class": "product_default",
+          "use_as": "diagnostic_only",
+          "beginner_soft_band_deg": [20, 45],
+          "amateur_soft_band_deg": [15, 35]
+        },
+        "recenter_time_s": {
+          "source_class": "product_default",
+          "use_as": "diagnostic_only",
+          "beginner_soft_band_s": [0.6, 1.2],
+          "amateur_soft_band_s": [0.4, 0.9]
+        }
+      },
+      "score_weights": {
+        "beginner": {
+          "control_zone_success_rate": 0.40,
+          "stabilization_time": 0.25,
+          "corrective_touch_count": 0.20,
+          "lateral_offset": 0.15
+        },
+        "amateur": {
+          "control_zone_success_rate": 0.45,
+          "stabilization_time": 0.25,
+          "corrective_touch_count": 0.15,
+          "lateral_offset": 0.15
+        }
+      }
+    },
+    "pass_receive_sequence": {
+      "display_name": "传接球序列",
+      "protocol": "pass_then_receive_chain",
+      "primary_metrics": {
+        "pass_endpoint_error_m": {
+          "source_class": "product_default",
+          "display_name": "Pass Endpoint Error / 传球终点误差",
+          "direction": "lower_is_better",
+          "beginner_thresholds": {
+            "excellent_max": 0.25,
+            "good_max": 0.45,
+            "poor_over": 0.85
+          },
+          "amateur_thresholds": {
+            "excellent_max": 0.20,
+            "good_max": 0.35,
+            "poor_over": 0.70
+          }
+        },
+        "pass_execution_time_s": {
+          "source_class": "product_default",
+          "display_name": "Pass Execution Time / 传球完成时间",
+          "direction": "lower_is_better",
+          "beginner_thresholds": {
+            "excellent_max": 1.80,
+            "good_max": 2.80,
+            "poor_over": 4.00
+          },
+          "amateur_thresholds": {
+            "excellent_max": 1.50,
+            "good_max": 2.30,
+            "poor_over": 3.20
+          }
+        },
+        "receive_control_zone_success_rate": {
+          "source_class": "product_default",
+          "display_name": "Receive Control Zone Success Rate / 接球控制区成功率",
+          "beginner_thresholds": {
+            "excellent": 0.82,
+            "good": 0.65,
+            "needs_work": 0.45
+          },
+          "amateur_thresholds": {
+            "excellent": 0.90,
+            "good": 0.75,
+            "needs_work": 0.55
+          }
+        },
+        "receive_stabilization_time_s": {
+          "source_class": "product_default",
+          "display_name": "Receive Stabilization Time / 接球稳定时间",
+          "direction": "lower_is_better",
+          "beginner_thresholds": {
+            "excellent_max": 0.90,
+            "good_max": 1.30,
+            "poor_over": 1.80
+          },
+          "amateur_thresholds": {
+            "excellent_max": 0.80,
+            "good_max": 1.10,
+            "poor_over": 1.50
+          }
+        },
+        "receive_corrective_touch_count": {
+          "source_class": "product_default",
+          "display_name": "Receive Corrective Touch Count / 接球补救触球数",
+          "direction": "lower_is_better",
+          "beginner_thresholds": {
+            "excellent_max": 0,
+            "good_max": 1,
+            "poor_over": 2
+          },
+          "amateur_thresholds": {
+            "excellent_max": 0,
+            "good_max": 1,
+            "poor_over": 1
+          }
+        },
+        "sequence_continuity_score": {
+          "source_class": "product_default",
+          "display_name": "Sequence Continuity Score / 序列衔接分",
+          "direction": "higher_is_better",
+          "beginner_thresholds": {
+            "excellent_min": 0.78,
+            "good_min": 0.60,
+            "needs_work_below": 0.40
+          },
+          "amateur_thresholds": {
+            "excellent_min": 0.84,
+            "good_min": 0.68,
+            "needs_work_below": 0.46
+          }
+        },
+        "next_action_readiness": {
+          "source_class": "product_default",
+          "display_name": "Next Action Readiness / 下一动作准备度",
+          "direction": "higher_is_better",
+          "beginner_thresholds": {
+            "excellent_min": 0.75,
+            "good_min": 0.55,
+            "needs_work_below": 0.35
+          },
+          "amateur_thresholds": {
+            "excellent_min": 0.80,
+            "good_min": 0.60,
+            "needs_work_below": 0.40
+          }
+        }
+      },
+      "secondary_metrics": {
+        "pass_receive_gap_s": {
+          "source_class": "product_default",
+          "display_name": "Pass-Receive Gap / 传接间隔",
+          "use_as": "diagnostic_only",
+          "soft_bands": [0.35, 0.75, 1.25]
+        }
+      },
+      "score_weights": {
+        "beginner": {
+          "pass_endpoint_error": 0.18,
+          "pass_execution_time": 0.12,
+          "receive_control_zone_success_rate": 0.18,
+          "receive_stabilization_time": 0.12,
+          "receive_corrective_touch_count": 0.10,
+          "sequence_continuity_score": 0.18,
+          "next_action_readiness": 0.12
+        },
+        "amateur": {
+          "pass_endpoint_error": 0.16,
+          "pass_execution_time": 0.12,
+          "receive_control_zone_success_rate": 0.20,
+          "receive_stabilization_time": 0.12,
+          "receive_corrective_touch_count": 0.08,
+          "sequence_continuity_score": 0.20,
+          "next_action_readiness": 0.12
+        }
+      }
+    },
+    "dribble_change_direction": {
+      "display_name": "带球",
+      "protocol": "slalom_or_change_direction",
+      "primary_metrics": {
+        "completion_time_s": {
+          "source_class": "literature_inspired",
+          "direction": "lower_is_better",
+          "improvement_claim_min_pct": 5,
+          "beginner_thresholds": {
+            "excellent_max": 8.0,
+            "good_max": 11.0,
+            "poor_over": 14.0
+          },
+          "amateur_thresholds": {
+            "excellent_max": 6.5,
+            "good_max": 9.0,
+            "poor_over": 11.5
+          }
+        },
+        "cone_hit_count": {
+          "source_class": "product_default",
+          "direction": "lower_is_better",
+          "beginner_thresholds": {
+            "excellent_max": 0,
+            "good_max": 1,
+            "poor_over": 2
+          },
+          "amateur_thresholds": {
+            "excellent_max": 0,
+            "good_max": 1,
+            "poor_over": 1
+          }
+        },
+        "out_of_lane_count": {
+          "source_class": "product_default",
+          "direction": "lower_is_better",
+          "beginner_thresholds": {
+            "excellent_max": 0,
+            "good_max": 1,
+            "poor_over": 2
+          },
+          "amateur_thresholds": {
+            "excellent_max": 0,
+            "good_max": 1,
+            "poor_over": 1
+          }
+        },
+        "control_loss_count": {
+          "source_class": "product_default",
+          "direction": "lower_is_better",
+          "beginner_thresholds": {
+            "excellent_max": 0,
+            "good_max": 1,
+            "poor_over": 2
+          },
+          "amateur_thresholds": {
+            "excellent_max": 0,
+            "good_max": 1,
+            "poor_over": 1
+          }
+        }
+      },
+      "secondary_metrics": {
+        "mean_touches_per_meter": {
+          "source_class": "product_default",
+          "use_as": "diagnostic_only",
+          "soft_bands": [1.5, 2.5, 3.5]
+        },
+        "max_ball_body_separation_m": {
+          "source_class": "product_default",
+          "use_as": "diagnostic_only",
+          "soft_bands": [0.8, 1.2, 1.8]
+        }
+      },
+      "score_weights": {
+        "beginner": {
+          "completion_time": 0.45,
+          "control_loss": 0.25,
+          "cone_hit": 0.15,
+          "out_of_lane": 0.15
+        },
+        "amateur": {
+          "completion_time": 0.50,
+          "control_loss": 0.20,
+          "cone_hit": 0.15,
+          "out_of_lane": 0.15
+        }
+      }
+    },
+    "juggling": {
+      "display_name": "颠球",
+      "attempts": 3,
+      "best_of": 3,
+      "max_count_cap": 100,
+      "primary_metrics": {
+        "consecutive_touches_dominant_foot": {
+          "source_class": "literature_inspired",
+          "direction": "higher_is_better",
+          "beginner_thresholds": {
+            "excellent_min": 20,
+            "good_min": 8,
+            "needs_work_below": 3
+          },
+          "amateur_thresholds": {
+            "excellent_min": 40,
+            "good_min": 20,
+            "needs_work_below": 8
+          }
+        },
+        "consecutive_touches_freestyle": {
+          "source_class": "product_default",
+          "direction": "higher_is_better",
+          "beginner_thresholds": {
+            "excellent_min": 15,
+            "good_min": 6,
+            "needs_work_below": 2
+          },
+          "amateur_thresholds": {
+            "excellent_min": 30,
+            "good_min": 15,
+            "needs_work_below": 5
+          }
+        },
+        "drop_count": {
+          "source_class": "product_default",
+          "direction": "lower_is_better",
+          "beginner_thresholds": {
+            "excellent_max": 0,
+            "good_max": 1,
+            "poor_over": 2
+          },
+          "amateur_thresholds": {
+            "excellent_max": 0,
+            "good_max": 1,
+            "poor_over": 1
+          }
+        }
+      },
+      "secondary_metrics": {
+        "non_dominant_foot_juggling": {
+          "source_class": "product_default",
+          "use_as": "diagnostic_only"
+        },
+        "complex_sequence_juggling": {
+          "source_class": "product_default",
+          "use_as": "diagnostic_only"
+        }
+      },
+      "score_weights": {
+        "beginner": {
+          "dominant_foot_count": 0.60,
+          "freestyle_count": 0.30,
+          "drop_count": 0.10
+        },
+        "amateur": {
+          "dominant_foot_count": 0.45,
+          "freestyle_count": 0.40,
+          "drop_count": 0.15
+        }
+      }
+    }
+  },
+  "reporting": {
+    "show": [
+      "overall_score",
+      "action_score",
+      "outcome_score",
+      "technique_score_if_quality_gate_pass",
+      "top_errors",
+      "timestamped_error_windows",
+      "best_trial",
+      "worst_trial"
+    ],
+    "never_claim": [
+      "single_camera_exact_biomechanics_truth",
+      "product_default_as_universal_paper_standard"
+    ]
+  }
+}

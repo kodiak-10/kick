@@ -1,0 +1,52 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python caches and local runtime output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+.venv/
+venv/
+logs/
+raw/
+videos/
+backend/data/*.db
+
+# Keep report generator source; ignore generated report artifacts.
+backend/reports/*.pdf
+backend/reports/*.png
+backend/reports/*.mp4
+backend/reports/*.txt
+backend/reports/plots/
+backend/reports/sessions/
+
+# Generated analysis artifacts
+diagnostics/
+dynamics/
+evidence/
+explain/
+keypoints/
+pose3d/
+plan/
+
+# Local media, while keeping intentional test fixtures trackable
+*.mov
+*.mp4
+!backend/tests/**/*.mp4
+
+# Xcode and macOS artifacts
+DerivedData/
+DerivedData_*/
+build/
+.build/
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+.swiftpm/
+.DS_Store

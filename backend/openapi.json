@@ -1,0 +1,34 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Plan Generator",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/generate_plan": {
+      "post": {
+        "summary": "Generate plan",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "user_profile": {"type": "object"},
+                  "explain_output": {"type": "object"},
+                  "goals": {"type": "object"}
+                }
+              }
+            }
+          }
+        },
+        "responses": {"200": {"description": "OK"}}
+      }
+    },
+    "/plan/{id}": {
+      "get": {"summary": "Get plan", "responses": {"200": {"description": "OK"}}},
+      "delete": {"summary": "Delete plan", "responses": {"200": {"description": "OK"}}}
+    }
+  }
+}

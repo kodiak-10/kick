@@ -1,0 +1,17 @@
+opencv-python
+mediapipe
+numpy
+torch
+tensorboard
+scikit-learn
+reportlab
+fastapi
+python-multipart
+uvicorn
+sqlalchemy
+networkx
+pytest
+jsonschema
+scipy
+matplotlib
+pillow

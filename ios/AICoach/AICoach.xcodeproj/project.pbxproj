@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000201 /* AICoach/App/AICoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000101 /* AICoach/App/AICoachApp.swift */; };
+		A10000000000000000000202 /* AICoach/Core/AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000102 /* AICoach/Core/AppState.swift */; };
+		A10000000000000000000203 /* AICoach/Models/Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000103 /* AICoach/Models/Models.swift */; };
+		A10000000000000000000204 /* AICoach/Models/MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000104 /* AICoach/Models/MockData.swift */; };
+		A10000000000000000000205 /* AICoach/Views/Components/Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000105 /* AICoach/Views/Components/Theme.swift */; };
+		A10000000000000000000206 /* AICoach/Views/Components/Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000106 /* AICoach/Views/Components/Components.swift */; };
+		A10000000000000000000207 /* AICoach/Views/Screens/RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000107 /* AICoach/Views/Screens/RootView.swift */; };
+		A10000000000000000000208 /* AICoach/Views/Screens/OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000108 /* AICoach/Views/Screens/OnboardingView.swift */; };
+		A10000000000000000000209 /* AICoach/Views/Screens/HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000109 /* AICoach/Views/Screens/HomeView.swift */; };
+		A1000000000000000000020A /* AICoach/Views/Screens/UploadVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010A /* AICoach/Views/Screens/UploadVideoView.swift */; };
+		A1000000000000000000020B /* AICoach/Views/Screens/ProcessingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010B /* AICoach/Views/Screens/ProcessingView.swift */; };
+		A1000000000000000000020C /* AICoach/Views/Screens/ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010C /* AICoach/Views/Screens/ResultView.swift */; };
+		A1000000000000000000020D /* AICoach/Views/Screens/PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010D /* AICoach/Views/Screens/PaywallView.swift */; };
+		A1000000000000000000020E /* AICoach/Views/Screens/HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010E /* AICoach/Views/Screens/HistoryView.swift */; };
+		A1000000000000000000020F /* AICoach/Views/Screens/ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000000000000000010F /* AICoach/Views/Screens/ProfileView.swift */; };
+		A10000000000000000000210 /* AICoach/Resources/传球.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000111 /* AICoach/Resources/传球.mp4 */; };
+		A10000000000000000000211 /* AICoach/Core/AnalysisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000112 /* AICoach/Core/AnalysisService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A10000000000000000000003 /* AICoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AICoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10000000000000000000101 /* AICoach/App/AICoachApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICoach/App/AICoachApp.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000102 /* AICoach/Core/AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICoach/Core/AppState.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000103 /* AICoach/Models/Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICoach/Models/Models.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000104 /* AICoach/Models/MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICoach/Models/MockData.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000105 /* AICoach/Views/Components/Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICoach/Views/Components/Theme.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000106 /* AICoach/Views/Components/Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICoach/Views/Components/Components.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000107 /* AICoach/Views/Screens/RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICoach/Views/Screens/RootView.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000108 /* AICoach/Views/Screens/OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICoach/Views/Screens/OnboardingView.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000109 /* AICoach/Views/Screens/HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICoach/Views/Screens/HomeView.swift; sourceTree = SOURCE_ROOT; };
+		A1000000000000000000010A /* AICoach/Views/Screens/UploadVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICoach/Views/Screens/UploadVideoView.swift; sourceTree = SOURCE_ROOT; };
+		A1000000000000000000010B /* AICoach/Views/Screens/ProcessingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICoach/Views/Screens/ProcessingView.swift; sourceTree = SOURCE_ROOT; };
+		A1000000000000000000010C /* AICoach/Views/Screens/ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICoach/Views/Screens/ResultView.swift; sourceTree = SOURCE_ROOT; };
+		A1000000000000000000010D /* AICoach/Views/Screens/PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICoach/Views/Screens/PaywallView.swift; sourceTree = SOURCE_ROOT; };
+		A1000000000000000000010E /* AICoach/Views/Screens/HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICoach/Views/Screens/HistoryView.swift; sourceTree = SOURCE_ROOT; };
+		A1000000000000000000010F /* AICoach/Views/Screens/ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICoach/Views/Screens/ProfileView.swift; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000110 /* AICoach/Resources/Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AICoach/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000111 /* AICoach/Resources/传球.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file.mp4; path = "AICoach/Resources/传球.mp4"; sourceTree = SOURCE_ROOT; };
+		A10000000000000000000112 /* AICoach/Core/AnalysisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AICoach/Core/AnalysisService.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1000000000000000000000F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A10000000000000000000004 = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000006 /* AICoach */,
+				A10000000000000000000005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A10000000000000000000005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000003 /* AICoach.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000006 /* AICoach */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000007 /* App */,
+				A10000000000000000000008 /* Core */,
+				A10000000000000000000009 /* Models */,
+				A1000000000000000000000A /* Views */,
+				A1000000000000000000000D /* Resources */,
+			);
+			path = AICoach;
+			sourceTree = SOURCE_ROOT;
+		};
+		A10000000000000000000007 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000101 /* AICoach/App/AICoachApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000008 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000102 /* AICoach/Core/AppState.swift */,
+				A10000000000000000000112 /* AICoach/Core/AnalysisService.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A10000000000000000000009 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000103 /* AICoach/Models/Models.swift */,
+				A10000000000000000000104 /* AICoach/Models/MockData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A1000000000000000000000A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000000B /* Components */,
+				A1000000000000000000000C /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A1000000000000000000000B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000105 /* AICoach/Views/Components/Theme.swift */,
+				A10000000000000000000106 /* AICoach/Views/Components/Components.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A1000000000000000000000C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000107 /* AICoach/Views/Screens/RootView.swift */,
+				A10000000000000000000108 /* AICoach/Views/Screens/OnboardingView.swift */,
+				A10000000000000000000109 /* AICoach/Views/Screens/HomeView.swift */,
+				A1000000000000000000010A /* AICoach/Views/Screens/UploadVideoView.swift */,
+				A1000000000000000000010B /* AICoach/Views/Screens/ProcessingView.swift */,
+				A1000000000000000000010C /* AICoach/Views/Screens/ResultView.swift */,
+				A1000000000000000000010D /* AICoach/Views/Screens/PaywallView.swift */,
+				A1000000000000000000010E /* AICoach/Views/Screens/HistoryView.swift */,
+				A1000000000000000000010F /* AICoach/Views/Screens/ProfileView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A1000000000000000000000D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000110 /* AICoach/Resources/Assets.xcassets */,
+				A10000000000000000000111 /* AICoach/Resources/传球.mp4 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10000000000000000000002 /* AICoach */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A10000000000000000000012 /* Build configuration list for PBXNativeTarget "AICoach" */;
+			buildPhases = (
+				A1000000000000000000000E /* Sources */,
+				A1000000000000000000000F /* Frameworks */,
+				A10000000000000000000010 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AICoach;
+			productName = AICoach;
+			productReference = A10000000000000000000003 /* AICoach.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2630;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					A10000000000000000000002 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+				};
+			};
+			buildConfigurationList = A10000000000000000000011 /* Build configuration list for PBXProject "AICoach" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10000000000000000000004;
+			productRefGroup = A10000000000000000000005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000000000000000000002 /* AICoach */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A10000000000000000000010 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000210 /* AICoach/Resources/传球.mp4 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1000000000000000000000E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000201 /* AICoach/App/AICoachApp.swift in Sources */,
+				A10000000000000000000202 /* AICoach/Core/AppState.swift in Sources */,
+				A10000000000000000000211 /* AICoach/Core/AnalysisService.swift in Sources */,
+				A10000000000000000000203 /* AICoach/Models/Models.swift in Sources */,
+				A10000000000000000000204 /* AICoach/Models/MockData.swift in Sources */,
+				A10000000000000000000205 /* AICoach/Views/Components/Theme.swift in Sources */,
+				A10000000000000000000206 /* AICoach/Views/Components/Components.swift in Sources */,
+				A10000000000000000000207 /* AICoach/Views/Screens/RootView.swift in Sources */,
+				A10000000000000000000208 /* AICoach/Views/Screens/OnboardingView.swift in Sources */,
+				A10000000000000000000209 /* AICoach/Views/Screens/HomeView.swift in Sources */,
+				A1000000000000000000020A /* AICoach/Views/Screens/UploadVideoView.swift in Sources */,
+				A1000000000000000000020B /* AICoach/Views/Screens/ProcessingView.swift in Sources */,
+				A1000000000000000000020C /* AICoach/Views/Screens/ResultView.swift in Sources */,
+				A1000000000000000000020D /* AICoach/Views/Screens/PaywallView.swift in Sources */,
+				A1000000000000000000020E /* AICoach/Views/Screens/HistoryView.swift in Sources */,
+				A1000000000000000000020F /* AICoach/Views/Screens/ProfileView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A10000000000000000000013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A10000000000000000000014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A10000000000000000000015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tim.aicoach.demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A10000000000000000000016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tim.aicoach.demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10000000000000000000011 /* Build configuration list for PBXProject "AICoach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000013 /* Debug */,
+				A10000000000000000000014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A10000000000000000000012 /* Build configuration list for PBXNativeTarget "AICoach" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10000000000000000000015 /* Debug */,
+				A10000000000000000000016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A10000000000000000000001 /* Project object */;
+}

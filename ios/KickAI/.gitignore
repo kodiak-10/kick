@@ -1,0 +1,21 @@
+# Xcode user state and build outputs
+DerivedData/
+build/
+.build/
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+
+# Local runtime configuration and secrets
+.env
+.env.*
+!.env.example
+Config.local.xcconfig
+
+# macOS metadata
+.DS_Store

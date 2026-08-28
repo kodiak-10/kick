@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Pose3DMeta",
+  "type": "object",
+  "required": ["clip_id", "fps", "joint_names", "units", "model_version", "generated_at", "frame_count"],
+  "properties": {
+    "clip_id": {"type": "string"},
+    "fps": {"type": "number"},
+    "joint_names": {"type": "array", "items": {"type": "string"}},
+    "units": {"type": "string"},
+    "model_version": {"type": "string"},
+    "generated_at": {"type": "string"},
+    "frame_count": {"type": "integer"}
+  }
+}

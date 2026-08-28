@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Explain",
+  "type": "object",
+  "required": ["clip_id", "faults", "model_version", "generated_at", "frame_count", "warning"],
+  "properties": {
+    "clip_id": {"type": "string"},
+    "faults": {"type": "array"},
+    "model_version": {"type": "string"},
+    "generated_at": {"type": "string"},
+    "frame_count": {"type": "integer"},
+    "warning": {"type": "string"}
+  }
+}
