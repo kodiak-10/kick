@@ -18,6 +18,20 @@ An AI-assisted football training companion, built to turn video into a clearer u
 
 ---
 
+## Inside Kick
+
+Real prototype screens from the project's product portfolio, showing the app experience from entry to review and the next training session. Tap any image to view the original.
+
+<p align="center">
+<a href="docs/assets/screenshots/home.jpg"><img src="docs/assets/screenshots/home.jpg" alt="Kick home screen and entry to football analysis" width="30%" /></a>
+<a href="docs/assets/screenshots/video-review.jpg"><img src="docs/assets/screenshots/video-review.jpg" alt="Video review with a training clip, action moments, and issue guidance" width="30%" /></a>
+<a href="docs/assets/screenshots/training-plan.jpg"><img src="docs/assets/screenshots/training-plan.jpg" alt="Training plan with drill instructions, sets, and repetitions" width="30%" /></a>
+</p>
+
+**01 / Start with a focus** · **02 / Review the movement** · **03 / Take a drill into training**
+
+These are development-stage interface captures with the original Chinese UI. On-screen scores, timestamps, and recommendations illustrate the prototype experience; they are not independently validated performance or accuracy results.
+
 ## Built for the Work Between Matches
 
 The effort happens on the pitch. Understanding that effort takes reflection: how did you set up the pass, where did control break down, and what deserves your attention next?
@@ -72,6 +86,18 @@ Upload, analysis, playback, and history are brought together in a native iOS app
 Kick's core is the relationship between a player, their footage, and their next training session. The broader product direction connects that individual experience with the football around them: places to play, people to learn with, and opportunities to keep training.
 
 The repository includes community, venue search, coach listing, and booking interfaces as foundations for that direction. These areas are still being developed and validated.
+
+### Keep the Training Context
+
+<p align="center">
+<a href="docs/assets/screenshots/training-history.jpg"><img src="docs/assets/screenshots/training-history.jpg" alt="Training history with session entries and a daily summary" width="30%" /></a>
+<a href="docs/assets/screenshots/venue-search.jpg"><img src="docs/assets/screenshots/venue-search.jpg" alt="Venue discovery list with map-provider information" width="30%" /></a>
+<a href="docs/assets/screenshots/venue-detail.jpg"><img src="docs/assets/screenshots/venue-detail.jpg" alt="Football venue details with a map and navigation entry" width="30%" /></a>
+</p>
+
+**Training history** · **Venue discovery** · **Map and navigation**
+
+History brings earlier sessions back into view. The venue screens show the developing discovery experience, including location details and navigation entry points.
 
 ## Product & Engineering
 

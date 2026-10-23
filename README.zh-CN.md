@@ -18,6 +18,20 @@
 
 ---
 
+## 看见真实的 Kick
+
+以下原型界面来自项目作品集，展示从进入分析、回看动作到下一组训练的产品体验。点击图片可查看原图。
+
+<p align="center">
+<a href="docs/assets/screenshots/home.jpg"><img src="docs/assets/screenshots/home.jpg" alt="Kick 首页与足球动作分析入口" width="30%" /></a>
+<a href="docs/assets/screenshots/video-review.jpg"><img src="docs/assets/screenshots/video-review.jpg" alt="包含训练视频、动作时刻与问题指导的回看界面" width="30%" /></a>
+<a href="docs/assets/screenshots/training-plan.jpg"><img src="docs/assets/screenshots/training-plan.jpg" alt="包含动作步骤、组数与次数的训练计划界面" width="30%" /></a>
+</p>
+
+**01 / 带着重点开始** · **02 / 回看具体动作** · **03 / 把建议带回训练**
+
+图片保留开发阶段的原始中文界面。画面中的分数、时间点与建议用于展示原型体验，不代表经过独立验证的训练效果或识别准确率。
+
 ## 为比赛之间的每一次训练而设计
 
 努力发生在球场上，理解这些努力需要复盘：这次传球如何起脚，控制在哪个环节出现变化，下一次又该把注意力放在哪里？
@@ -72,6 +86,18 @@ Kick 将动作评分、阶段评估、问题说明与下一步提示结合起来
 Kick 的核心，是球员、训练影像与下一次练习之间的联系。更长远的产品方向，是将个人训练连接到身边的足球生活：去哪里踢、和谁一起练，以及如何持续参与。
 
 仓库中已有球友圈、球场查询、教练列表与预约界面和接口，为这一方向提供基础。这些部分仍在持续开发与验证中。
+
+### 将训练放回完整场景
+
+<p align="center">
+<a href="docs/assets/screenshots/training-history.jpg"><img src="docs/assets/screenshots/training-history.jpg" alt="包含训练记录与当天汇总的历史界面" width="30%" /></a>
+<a href="docs/assets/screenshots/venue-search.jpg"><img src="docs/assets/screenshots/venue-search.jpg" alt="包含地图来源信息的球场发现列表" width="30%" /></a>
+<a href="docs/assets/screenshots/venue-detail.jpg"><img src="docs/assets/screenshots/venue-detail.jpg" alt="包含地图与导航入口的球场详情界面" width="30%" /></a>
+</p>
+
+**训练历史** · **球场发现** · **地图与导航**
+
+历史记录让之前的训练重新进入视野。球场界面展示正在开发中的发现体验，包括地点详情与导航入口。
 
 ## 产品与工程
 
