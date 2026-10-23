@@ -1,56 +1,67 @@
 <div align="center">
 
-<img src="ios/KickAI/KickAI/Assets.xcassets/AppIcon.appiconset/KickIcon-120.png" alt="Kick app icon" width="88" />
+<img src="docs/assets/kick-banner.svg" alt="Kick — Football video intelligence. See the movement. Understand the next move." width="100%" />
 
 # Kick
 
+**Football video intelligence. Built around the player.**
+
+Movement analysis, video review, and training feedback — connected in a native iOS experience.
+
 **English** · [简体中文](README.zh-CN.md)
 
-### Turn every training session into visible progress.
+[Explore the Product](#the-training-loop) · [Quick Start](#quick-start) · [iOS Guide](ios/KickAI/README.md) · [Backend & API](backend/README.md)
 
-Football video analysis connecting movement assessment, video review, and training feedback.
-
-**SwiftUI · FastAPI · Computer Vision**
-
-[Quick Start](#quick-start) · [iOS Client](ios/KickAI/README.md) · [Backend & API](backend/README.md)
+<sub>SwiftUI · iOS 17+ · Python · FastAPI · OpenCV · MediaPipe</sub>
 
 </div>
 
 ---
 
-## Overview
+## From Footage to Feedback
 
-Kick combines video upload and playback on iOS with a Python backend for pose detection, football movement rules, and scoring. It helps users review their movements, understand feedback, and keep track of training.
+A training video captures what happened. Kick brings movement assessment and feedback into the same review workflow, helping players look closer at how an action was performed and what to work on next.
 
-This repository includes the primary app, the analysis service, and exploratory implementations. The capabilities below describe the current code; they do not imply production readiness or independently validated accuracy.
+The project connects a SwiftUI app with a Python computer-vision backend: select a movement, upload a clip, and review the analysis alongside the footage.
 
-## Core Experience
+<table>
+<tr>
+<td width="33%" valign="top"><strong>01 / ANALYZE</strong><br /><br />Football-specific movement routes and rule-based scoring for technique and control.</td>
+<td width="33%" valign="top"><strong>02 / UNDERSTAND</strong><br /><br />Issue descriptions, phase scores, and quality signals that put a result in context.</td>
+<td width="33%" valign="top"><strong>03 / REVIEW</strong><br /><br />Video playback, training feedback, and history in one native iOS workflow.</td>
+</tr>
+</table>
 
-| Area | Current implementation |
+## The Training Loop
+
+1. **Choose the focus.** Select passing, shooting, receiving, a pass-receive sequence, or the single-player long-video flow.
+2. **Bring the footage.** Upload a training clip from the iOS client to the analysis service.
+3. **Inspect the movement.** The backend combines pose and ball processing with movement rules, scoring, and quality checks.
+4. **Review the feedback.** Return to the footage with scores, issue descriptions, and training cues.
+
+| Product area | What is in the repository |
 | --- | --- |
-| Movement analysis | Selection flows and backend routes for passing, shooting, receiving, and pass-receive sequences |
-| Training feedback | Movement scores, issue descriptions, and analysis status presented in the client |
-| Video review | Video playback alongside feedback, with a training history entry point |
-| Long-video exploration | A single-player long-video flow, target tracking, and action-window localization |
-| Football discovery | Interfaces and screens for community posts, venue search, coach listings, and bookings |
+| **Movement analysis** | Explicit action selection and dedicated backend analysis routes |
+| **Training feedback** | Technical execution, control stability, phase scores, and next-step advice |
+| **Video review** | Playback feedback views and training history |
+| **Long-video exploration** | A single-player flow, target tracking, and candidate action-window localization |
+| **Football discovery** | Community, venue search, coach listings, and booking interfaces |
 
-Results depend on camera angle, occlusion, video quality, and movement type. Scores reflect the current rules and vision pipeline and should be interpreted alongside the original footage. Long-video and discovery features require validation for each intended use case.
+## Engineering Behind the Experience
 
-## How It Works
+| Design choice | Implementation |
+| --- | --- |
+| **Explicit movement routing** | The selected action determines the analysis template, with route metadata returned for inspection. [Routing](backend/analysis/analyzer_router.py) |
+| **Football-specific scoring** | Movement templates describe preparation, support, contact, and follow-through, with issue explanations and training cues. [Scoring](backend/analysis/football_scoring.py) |
+| **Quality signals alongside scores** | Quality checks evaluate frame rate, pose visibility, and ball-track coverage. [Quality checks](backend/quality_gate.py) |
+| **Target continuity** | Target-lock logic compares position, body scale, and appearance across frames. [Tracking](backend/analysis/target_tracking.py) |
+| **Client and API separation** | SwiftUI handles the app experience; FastAPI exposes analysis and discovery services. [iOS](ios/KickAI/README.md) · [Backend](backend/README.md) |
 
-```text
-Select an action and video
-          ↓
-Upload from the SwiftUI client
-          ↓
-FastAPI receives the request and selects an analysis route
-          ↓
-Pose & ball tracking → Movement rules & scoring → Quality status & feedback
-          ↓
-Client report and video review
-```
+### Project Status
 
-The service returns status and warning information. Integrations should inspect both the result and its analysis status; a successful HTTP request alone does not establish a valid analysis.
+Kick is under active development. The table above describes code present in the repository, rather than independently validated accuracy or production readiness. Long-video and discovery flows require scenario-specific validation; coaching and booking interfaces do not establish live service fulfillment.
+
+Analysis depends on camera angle, occlusion, footage quality, and action type. Review scores with the original video and inspect analysis status and warnings, including when HTTP requests succeed.
 
 ## Quick Start
 

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="520" viewBox="0 0 1600 520" role="img" aria-labelledby="title desc">
+<title id="title">Kick — Football video intelligence</title>
+<desc id="desc">Kick brand cover with a football pitch, an abstract movement trajectory, and the words See the movement. Understand the next move.</desc>
+<defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b201a"/><stop offset="1" stop-color="#143f30"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#b9f56b" stop-opacity=".15"/><stop offset="1" stop-color="#b9f56b" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#d6f1dc" stroke-opacity=".045"/></pattern>
+</defs>
+<rect width="1600" height="520" rx="24" fill="url(#bg)"/>
+<rect width="1600" height="520" rx="24" fill="url(#grid)"/>
+<ellipse cx="1230" cy="270" rx="390" ry="300" fill="url(#glow)"/>
+<g fill="none" stroke="#b4d1bd" stroke-opacity=".16" stroke-width="2">
+<rect x="958" y="62" width="554" height="394" rx="8"/>
+<path d="M1235 62V456"/><circle cx="1235" cy="259" r="73"/>
+<path d="M958 155H1044V363H958M1512 155H1426V363H1512"/>
+<path d="M958 209H990V309H958M1512 209H1480V309H1512"/>
+</g>
+<g font-family="Arial, Helvetica, sans-serif">
+<rect x="72" y="62" width="34" height="5" rx="2.5" fill="#ccf77a"/>
+<text x="122" y="72" font-size="16" font-weight="700" letter-spacing="4" fill="#ccf77a">FOOTBALL VIDEO INTELLIGENCE</text>
+<text x="64" y="239" font-size="164" font-weight="900" letter-spacing="-10" fill="#f3f6ed">KICK<tspan fill="#ccf77a">.</tspan></text>
+<text x="73" y="313" font-size="32" font-weight="500" fill="#f3f6ed">See the movement.</text>
+<text x="73" y="356" font-size="32" font-weight="500" fill="#f3f6ed">Understand the next move.</text>
+<text x="74" y="447" font-size="14" letter-spacing="2.6" fill="#a8bfb0">MOVEMENT ANALYSIS  /  VIDEO REVIEW  /  TRAINING FEEDBACK</text>
+</g>
+<path d="M1054 365C1150 372 1090 267 1208 278S1323 149 1427 139" fill="none" stroke="#ccf77a" stroke-width="4" stroke-dasharray="9 10" stroke-linecap="round"/>
+<g fill="#143f30" stroke="#ccf77a" stroke-width="3"><circle cx="1054" cy="365" r="9"/><circle cx="1208" cy="278" r="9"/></g>
+<circle cx="1427" cy="139" r="26" fill="#ccf77a" fill-opacity=".12"/>
+<circle cx="1427" cy="139" r="10" fill="#ccf77a"/>
+<path d="M1409 124L1428 138L1412 153" fill="none" stroke="#f3f6ed" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
