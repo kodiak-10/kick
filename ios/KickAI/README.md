@@ -1,49 +1,51 @@
-# Kick · iOS 客户端
+# Kick · iOS Client
 
-基于 SwiftUI 的足球视频分析应用，包含动作选择、视频上传、训练反馈、回放与历史记录，以及球友圈、球场和教练服务入口。
+**English** · [简体中文](README.zh-CN.md)
 
-[返回项目首页](../../README.md) · [分析后端](../../backend/README.md)
+A SwiftUI football video-analysis app with movement selection, video upload, training feedback, playback, and history, plus entry points for community, venues, and coaching services.
 
-## 运行条件
+[Project Home](../../README.md) · [Analysis Backend](../../backend/README.md)
 
-- macOS 与支持 iOS 17 SDK 的 Xcode。
-- iOS 17 或更高版本的模拟器或设备。
-- 可访问的 Kick 分析后端。
+## Requirements
 
-## 本地运行
+- macOS and Xcode with support for the iOS 17 SDK.
+- An iOS 17 or later simulator or device.
+- A reachable Kick analysis backend.
 
-1. 打开本目录下的 `Kick.xcodeproj`。
-2. 选择 `KickAI` scheme 和目标设备。
-3. 启动分析后端，并确认 `/health` 中视频分析模块可用。
-4. 按下方说明配置地址，再运行应用。真机运行还需在 Xcode 中配置自己的签名团队。
+## Local Setup
 
-## 分析服务地址
+1. Open `Kick.xcodeproj` in this directory.
+2. Select the `KickAI` scheme and target device.
+3. Start the analysis backend and confirm that video analysis is available in `/health`.
+4. Configure the address below, then run the app. Physical-device builds also require your own signing team in Xcode.
 
-在 **Product → Scheme → Edit Scheme → Run → Arguments → Environment Variables** 中配置：
+## Analysis Service Address
 
-| 场景 | 变量 | 值 |
+Configure variables under **Product → Scheme → Edit Scheme → Run → Arguments → Environment Variables**:
+
+| Scenario | Variable | Value |
 | --- | --- | --- |
-| 模拟器连接本机 | 无需设置 | 默认 `http://127.0.0.1:8000` |
-| 模拟器连接其他服务 | `KICKAI_ANALYZE_SIMULATOR_BASE_URL` | 可访问的服务根地址 |
-| 真机连接 Mac | `KICKAI_ANALYZE_DEVICE_BASE_URL` | `http://<Mac 的局域网 IP>:8000` |
-| 统一覆盖地址 | `KICKAI_ANALYZE_BASE_URL` | 优先于设备与模拟器配置 |
+| Simulator using the local backend | No configuration needed | Defaults to `http://127.0.0.1:8000` |
+| Simulator using another backend | `KICKAI_ANALYZE_SIMULATOR_BASE_URL` | Reachable service base URL |
+| Physical device connecting to a Mac | `KICKAI_ANALYZE_DEVICE_BASE_URL` | `http://<your-Mac-LAN-IP>:8000` |
+| Shared override | `KICKAI_ANALYZE_BASE_URL` | Takes precedence over device and simulator settings |
 
-填写服务根地址，不要附加 `/analyze_video`；客户端会自动拼接。
+Use the service base URL without `/analyze_video`; the client appends the endpoint.
 
-真机与 Mac 需要网络互通，后端监听 `0.0.0.0:8000`。真机中的 `127.0.0.1` 指向手机自身。当前代码保留了原开发机的默认真机地址，应明确设置自己的地址。
+The device and Mac must be reachable over the network, with the backend listening on `0.0.0.0:8000`. On a physical device, `127.0.0.1` refers to the phone itself. The code retains the original developer's default device address, so explicitly configure your own.
 
-配置逻辑见 [VideoAnalysisService.swift](KickAI/Services/VideoAnalysisService.swift)。
+See [VideoAnalysisService.swift](KickAI/Services/VideoAnalysisService.swift) for configuration logic.
 
-## 功能与分析状态
+## Features & Analysis Status
 
-应用提供传球、射门、接球、传接球和单一球员长视频入口。具体动作与模板映射见 [AnalysisActionChoice.swift](KickAI/Models/AnalysisActionChoice.swift)。
+The app includes entry points for passing, shooting, receiving, pass-receive sequences, and single-player long videos. See [AnalysisActionChoice.swift](KickAI/Models/AnalysisActionChoice.swift) for movement and template mappings.
 
-后端同时返回分析状态、告警和反馈内容；请求成功不代表动作分析有效。接球入口与后端路由的兼容性应在联调时检查。
+The backend returns analysis status, warnings, and feedback. A successful request does not establish a valid analysis. Check compatibility between the receiving flow and the backend route during integration.
 
-地图服务密钥通过后端环境变量配置；不要写入客户端或提交到仓库。教练、订阅及发现界面的存在不代表相关商业服务已正式上线。
+Configure map credentials through backend environment variables; keep them out of the client and repository. Coaching, subscription, and discovery screens do not imply that their commercial services are live.
 
-## 验证
+## Validation
 
-在 Xcode 中选择 `KickAI` scheme，执行 **Product → Test**。单元测试与界面测试分别位于 `KickAITests/` 和 `KickAIUITests/`。
+Select the `KickAI` scheme in Xcode and choose **Product → Test**. Unit and UI tests are located in `KickAITests/` and `KickAIUITests/`, respectively.
 
-`xcuserdata`、构建缓存、设备个人配置与本地凭据不应提交到 Git。
+Keep `xcuserdata`, build caches, personal device settings, and local credentials out of Git.

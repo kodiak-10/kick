@@ -1,60 +1,62 @@
 <div align="center">
 
-<img src="ios/KickAI/KickAI/Assets.xcassets/AppIcon.appiconset/KickIcon-120.png" alt="Kick 图标" width="88" />
+<img src="ios/KickAI/KickAI/Assets.xcassets/AppIcon.appiconset/KickIcon-120.png" alt="Kick app icon" width="88" />
 
 # Kick
 
-### 把每一次训练，变成看得见的进步。
+**English** · [简体中文](README.zh-CN.md)
 
-面向足球训练的视频分析项目，连接动作评估、视频复盘与训练反馈。
+### Turn every training session into visible progress.
+
+Football video analysis connecting movement assessment, video review, and training feedback.
 
 **SwiftUI · FastAPI · Computer Vision**
 
-[快速开始](#快速开始) · [iOS 客户端](ios/KickAI/README.md) · [后端与 API](backend/README.md)
+[Quick Start](#quick-start) · [iOS Client](ios/KickAI/README.md) · [Backend & API](backend/README.md)
 
 </div>
 
 ---
 
-## 项目介绍
+## Overview
 
-Kick 将 iOS 端的视频上传与回放体验，与 Python 后端的姿态检测、足球动作规则和评分流程连接起来，帮助使用者回看动作、理解反馈并记录训练。
+Kick combines video upload and playback on iOS with a Python backend for pose detection, football movement rules, and scoring. It helps users review their movements, understand feedback, and keep track of training.
 
-当前仓库包含主应用、分析服务和探索性实现。以下能力依据代码整理；不代表所有流程已达到正式发布标准，也不代表分析准确率已经过独立验证。
+This repository includes the primary app, the analysis service, and exploratory implementations. The capabilities below describe the current code; they do not imply production readiness or independently validated accuracy.
 
-## 核心体验
+## Core Experience
 
-| 方向 | 当前实现 |
+| Area | Current implementation |
 | --- | --- |
-| 动作分析 | 提供传球、射门、接球及传接球序列的选择入口和后端分析路由 |
-| 训练反馈 | 输出动作评分、问题提示和分析状态，在客户端展示训练反馈 |
-| 视频复盘 | 结合视频回放查看动作与反馈，保留训练历史入口 |
-| 长视频探索 | 包含单一球员长视频入口、目标跟踪和动作片段定位实现 |
-| 足球发现 | 包含球友圈、球场查询、教练列表和预约等接口与界面 |
+| Movement analysis | Selection flows and backend routes for passing, shooting, receiving, and pass-receive sequences |
+| Training feedback | Movement scores, issue descriptions, and analysis status presented in the client |
+| Video review | Video playback alongside feedback, with a training history entry point |
+| Long-video exploration | A single-player long-video flow, target tracking, and action-window localization |
+| Football discovery | Interfaces and screens for community posts, venue search, coach listings, and bookings |
 
-分析结果受拍摄角度、遮挡、画面质量和动作类型影响。评分基于当前规则与视觉流程，应结合原视频理解。长视频及发现功能仍需按具体场景验证。
+Results depend on camera angle, occlusion, video quality, and movement type. Scores reflect the current rules and vision pipeline and should be interpreted alongside the original footage. Long-video and discovery features require validation for each intended use case.
 
-## 工作方式
+## How It Works
 
 ```text
-选择动作与视频
-      ↓
-SwiftUI 客户端上传
-      ↓
-FastAPI 接收请求并选择分析流程
-      ↓
-姿态与球轨迹处理 → 动作规则与评分 → 质量状态与反馈
-      ↓
-客户端报告与视频复盘
+Select an action and video
+          ↓
+Upload from the SwiftUI client
+          ↓
+FastAPI receives the request and selects an analysis route
+          ↓
+Pose & ball tracking → Movement rules & scoring → Quality status & feedback
+          ↓
+Client report and video review
 ```
 
-分析服务会返回状态和告警信息。接入时应同时检查结果内容与分析状态，不能仅凭 HTTP 请求成功判断分析有效。
+The service returns status and warning information. Integrations should inspect both the result and its analysis status; a successful HTTP request alone does not establish a valid analysis.
 
-## 快速开始
+## Quick Start
 
-### 1. 启动分析服务
+### 1. Start the Analysis Service
 
-需要 Python 3.10 或更高版本；依赖未锁定，具体环境兼容性需在本机验证。
+Requires Python 3.10 or later. Dependencies are not pinned; verify compatibility in your local environment.
 
 ```bash
 git clone https://github.com/kodiak-10/kick.git
@@ -65,55 +67,55 @@ python -m pip install -r requirements.txt
 python -m uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
-启动后查看 [健康状态](http://127.0.0.1:8000/health) 与 [交互式 API 文档](http://127.0.0.1:8000/docs)。确认健康响应中的视频分析服务可用，并检查启动告警。
+Once running, open the [health endpoint](http://127.0.0.1:8000/health) and [interactive API documentation](http://127.0.0.1:8000/docs). Confirm that video analysis is available in the health response and inspect startup warnings.
 
-球场查询的地图配置、上传示例和状态说明见 [后端文档](backend/README.md)。
+See the [backend guide](backend/README.md) for map configuration, upload examples, and analysis status details.
 
-### 2. 运行 iOS 应用
+### 2. Run the iOS App
 
-1. 在 macOS 上用支持 iOS 17 SDK 的 Xcode 打开 `ios/KickAI/Kick.xcodeproj`。
-2. 选择 `KickAI` scheme，以及 iOS 17 或更高版本的模拟器或设备。
-3. 模拟器默认连接 `http://127.0.0.1:8000`。真机需在 Xcode 的 **Edit Scheme → Run → Arguments → Environment Variables** 设置：
+1. On macOS, open `ios/KickAI/Kick.xcodeproj` in Xcode with support for the iOS 17 SDK.
+2. Select the `KickAI` scheme and a simulator or device running iOS 17 or later.
+3. The simulator connects to `http://127.0.0.1:8000` by default. For a physical device, set the following under **Edit Scheme → Run → Arguments → Environment Variables**:
 
 ```text
-KICKAI_ANALYZE_DEVICE_BASE_URL=http://<Mac 的局域网 IP>:8000
+KICKAI_ANALYZE_DEVICE_BASE_URL=http://<your-Mac-LAN-IP>:8000
 ```
 
-真机与 Mac 需要网络互通。完整配置见 [iOS 文档](ios/KickAI/README.md)。
+The device and Mac must be able to reach each other over the network. See the [iOS guide](ios/KickAI/README.md) for full configuration.
 
-## 仓库导航
+## Repository Guide
 
 ```text
 kick/
-├── ios/KickAI/          主 SwiftUI 应用、Xcode 工程与测试
-├── ios/AICoach/         早期 iOS 实现，保留供参考
+├── ios/KickAI/          Primary SwiftUI app, Xcode project, and tests
+├── ios/AICoach/         Earlier iOS implementation retained for reference
 ├── backend/
-│   ├── main.py         FastAPI 服务入口
-│   ├── analysis/       动作路由、视频分析、跟踪与评分
-│   ├── vision/         姿态检测与关键点处理
-│   ├── tests/          后端测试与样例
-│   ├── docs/           研究资料、使用说明与规划
-│   └── schemas/        数据结构定义
-└── docs/               网页演示文件
+│   ├── main.py         FastAPI entry point
+│   ├── analysis/       Action routing, video analysis, tracking, and scoring
+│   ├── vision/         Pose detection and keypoint processing
+│   ├── tests/          Backend tests and samples
+│   ├── docs/           Research, usage guides, and plans
+│   └── schemas/        Data structure definitions
+└── docs/               Web demos
 ```
 
-以代码与当前接口为准；`backend/docs/` 中的规划文档包含尚待实施的设想。
+The code and current API define implemented behavior. Planning documents in `backend/docs/` also include ideas that have not yet been implemented.
 
-## 开发与验证
+## Development & Validation
 
-后端测试：
+Backend tests:
 
 ```bash
 cd backend
 python -m pytest
 ```
 
-iOS 测试：在 Xcode 中选择 `KickAI` scheme 后执行 **Product → Test**。
+For iOS tests, select the `KickAI` scheme in Xcode and choose **Product → Test**.
 
-测试目录覆盖动作路由、评分、视频结果一致性及客户端模型等方向。测试通过情况应以实际运行结果为准。
+The test directories cover action routing, scoring, video result consistency, and client models, among other areas. Test results must be established by running the relevant checks.
 
-## 反馈与协作
+## Feedback & Contributions
 
-欢迎通过 [Issues](https://github.com/kodiak-10/kick/issues) 提交问题。请附上复现步骤、运行环境、所选动作和实际结果；分享视频与日志前，请移除个人信息和凭据。
+Report problems through [Issues](https://github.com/kodiak-10/kick/issues). Include reproduction steps, your environment, the selected action, and the actual result. Remove personal information and credentials before sharing footage or logs.
 
-提交改动前，请说明变更目的与验证结果。地图密钥、用户视频、本地数据库及生成报告应保留在本地。
+For changes, describe the purpose and validation performed. Keep map credentials, user videos, local databases, and generated reports out of the repository.
