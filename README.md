@@ -4,64 +4,96 @@
 
 # Kick
 
-**Football video intelligence. Built around the player.**
+### Your footage. Clearer feedback. More purposeful training.
 
-Movement analysis, video review, and training feedback — connected in a native iOS experience.
+An AI-assisted football training companion, built to turn video into a clearer understanding of your game.
 
 **English** · [简体中文](README.zh-CN.md)
 
-[Explore the Product](#the-training-loop) · [Quick Start](#quick-start) · [iOS Guide](ios/KickAI/README.md) · [Backend & API](backend/README.md)
+[Why Kick](#built-for-the-work-between-matches) · [The Experience](#a-clearer-training-loop) · [Quick Start](#quick-start) · [Documentation](backend/README.md)
 
-<sub>SwiftUI · iOS 17+ · Python · FastAPI · OpenCV · MediaPipe</sub>
+<sub>Football-first analysis · Video-led review · Native iOS experience</sub>
 
 </div>
 
 ---
 
-## From Footage to Feedback
+## Built for the Work Between Matches
 
-A training video captures what happened. Kick brings movement assessment and feedback into the same review workflow, helping players look closer at how an action was performed and what to work on next.
+The effort happens on the pitch. Understanding that effort takes reflection: how did you set up the pass, where did control break down, and what deserves your attention next?
 
-The project connects a SwiftUI app with a Python computer-vision backend: select a movement, upload a clip, and review the analysis alongside the footage.
+Kick is designed for players who want to train with a purpose. It brings football movement analysis, video review, and practical feedback into one workflow, helping you move from watching a clip to choosing a focus for your next session.
+
+**The product ambition is simple: make useful training feedback part of everyday football.**
+
+## See the Action. Find Your Focus.
 
 <table>
 <tr>
-<td width="33%" valign="top"><strong>01 / ANALYZE</strong><br /><br />Football-specific movement routes and rule-based scoring for technique and control.</td>
-<td width="33%" valign="top"><strong>02 / UNDERSTAND</strong><br /><br />Issue descriptions, phase scores, and quality signals that put a result in context.</td>
-<td width="33%" valign="top"><strong>03 / REVIEW</strong><br /><br />Video playback, training feedback, and history in one native iOS workflow.</td>
+<td width="33%" valign="top"><strong>SEE YOUR TECHNIQUE</strong><br /><br />Look closer at preparation, support, contact, and follow-through, with football-specific movement assessment.</td>
+<td width="33%" valign="top"><strong>UNDERSTAND THE FEEDBACK</strong><br /><br />Read issue explanations and training cues alongside scores, so the review has a practical direction.</td>
+<td width="33%" valign="top"><strong>RETURN WITH INTENT</strong><br /><br />Revisit the footage and training history to choose what you want to work on next.</td>
 </tr>
 </table>
 
-## The Training Loop
+### Built Around Football
 
-1. **Choose the focus.** Select passing, shooting, receiving, a pass-receive sequence, or the single-player long-video flow.
-2. **Bring the footage.** Upload a training clip from the iOS client to the analysis service.
-3. **Inspect the movement.** The backend combines pose and ball processing with movement rules, scoring, and quality checks.
-4. **Review the feedback.** Return to the footage with scores, issue descriptions, and training cues.
+A pass, a shot, and a first touch each ask something different of the player. Kick's analysis follows that distinction, with action-specific templates and feedback grounded in football movements.
 
-| Product area | What is in the repository |
+| Training focus | What the experience is designed to help you examine |
 | --- | --- |
-| **Movement analysis** | Explicit action selection and dedicated backend analysis routes |
-| **Training feedback** | Technical execution, control stability, phase scores, and next-step advice |
-| **Video review** | Playback feedback views and training history |
-| **Long-video exploration** | A single-player flow, target tracking, and candidate action-window localization |
-| **Football discovery** | Community, venue search, coach listings, and booking interfaces |
+| **Passing** | Preparation, support-foot position, contact, and control stability |
+| **Shooting** | How the movement comes together through setup, strike, and follow-through |
+| **Receiving** | First-touch preparation, control, and readiness for the next action |
+| **Pass-receive sequences** | How individual movements connect across a continuous sequence |
+| **Single-player long video** | A developing workflow for following one player and locating candidate action moments |
 
-## Engineering Behind the Experience
+### Feedback You Can Put Back Into Practice
 
-| Design choice | Implementation |
+Kick's feedback combines movement scores, phase-level assessment, issue explanations, and next-step cues. The aim is to give each review a useful destination: a specific part of the action to pay attention to when you train again.
+
+Video remains central to the experience. Return to the original movement, read the feedback in context, and use it to guide your own review.
+
+### A Companion Across Sessions
+
+Upload, analysis, playback, and history are brought together in a native iOS app. Kick is designed to make reviewing a session a natural part of the training routine, with previous footage and feedback available through the history experience.
+
+## A Clearer Training Loop
+
+1. **Pick your focus.** Choose the football action you want to review.
+2. **Bring your footage.** Upload a clip from the iOS app.
+3. **Explore the feedback.** Review movement scores, issue descriptions, and analysis quality.
+4. **Take a focus forward.** Revisit the video and choose what to pay attention to next time.
+
+**Capture → Understand → Review → Train with intent**
+
+## The Bigger Picture
+
+Kick's core is the relationship between a player, their footage, and their next training session. The broader product direction connects that individual experience with the football around them: places to play, people to learn with, and opportunities to keep training.
+
+The repository includes community, venue search, coach listing, and booking interfaces as foundations for that direction. These areas are still being developed and validated.
+
+## Product & Engineering
+
+The experience is supported by a SwiftUI iOS app and a Python/FastAPI analysis service, using OpenCV and MediaPipe for vision processing.
+
+<details>
+<summary><strong>Explore the implementation</strong></summary>
+
+| Foundation | Implementation |
 | --- | --- |
-| **Explicit movement routing** | The selected action determines the analysis template, with route metadata returned for inspection. [Routing](backend/analysis/analyzer_router.py) |
-| **Football-specific scoring** | Movement templates describe preparation, support, contact, and follow-through, with issue explanations and training cues. [Scoring](backend/analysis/football_scoring.py) |
-| **Quality signals alongside scores** | Quality checks evaluate frame rate, pose visibility, and ball-track coverage. [Quality checks](backend/quality_gate.py) |
-| **Target continuity** | Target-lock logic compares position, body scale, and appearance across frames. [Tracking](backend/analysis/target_tracking.py) |
-| **Client and API separation** | SwiftUI handles the app experience; FastAPI exposes analysis and discovery services. [iOS](ios/KickAI/README.md) · [Backend](backend/README.md) |
+| Football-specific analysis | [Action routing](backend/analysis/analyzer_router.py) · [Movement scoring](backend/analysis/football_scoring.py) |
+| Quality context | [Frame rate, pose visibility, and ball-track checks](backend/quality_gate.py) |
+| Target continuity | [Position, scale, and appearance tracking](backend/analysis/target_tracking.py) |
+| App and service | [iOS guide](ios/KickAI/README.md) · [Backend & API](backend/README.md) |
 
-### Project Status
+</details>
 
-Kick is under active development. The table above describes code present in the repository, rather than independently validated accuracy or production readiness. Long-video and discovery flows require scenario-specific validation; coaching and booking interfaces do not establish live service fulfillment.
+### Availability & Analysis Scope
 
-Analysis depends on camera angle, occlusion, footage quality, and action type. Review scores with the original video and inspect analysis status and warnings, including when HTTP requests succeed.
+Kick is in active development. This repository contains the current implementation; the product direction above is not a claim of production readiness or independently validated training outcomes. Long-video and discovery flows require further scenario-specific validation, and coaching interfaces do not establish live service fulfillment.
+
+Analysis depends on filming conditions and movement type. Interpret feedback alongside the original footage and check analysis status and warnings; successful HTTP requests alone do not establish valid results.
 
 ## Quick Start
 
