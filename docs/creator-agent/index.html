@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="熊文｜小红书创作者 Agent 生态岗位定制产品思考：从足球训练指导到可测试、可纠错、可交付的 AI Agent 服务。">
+<title>从足球训练指导到 AI Agent｜熊文的创作者生态产品思考</title>
+<style>
+:root{--ink:#17324d;--teal:#098d91;--muted:#607384;--line:#dce7ec;--wash:#eff8f8;--bg:#f5f8fb}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#223647;font:16px/1.85 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",Arial,sans-serif}a{color:#0a7b90;text-underline-offset:3px}header{background:linear-gradient(120deg,#10283f,#1b4054);color:white;padding:64px 24px 52px}.wrap{max-width:900px;margin:auto}.eyebrow{font:700 12px/1.4 Arial,sans-serif;letter-spacing:2px;color:#64dbd6}header h1{font-size:clamp(30px,5vw,52px);letter-spacing:-.8px;line-height:1.25;margin:18px 0 15px}header p{font-size:19px;opacity:.9;max-width:760px;margin:0}.meta{font-size:13px;opacity:.72;margin-top:27px}.nav{display:flex;gap:10px;flex-wrap:wrap;margin-top:27px}.nav a{color:white;text-decoration:none;border:1px solid #6c8798;border-radius:22px;padding:5px 14px;font-size:13px}main{max-width:900px;margin:0 auto;padding:30px 24px 60px}.note{background:#e5f4f3;border-left:4px solid var(--teal);padding:14px 20px;border-radius:4px;margin:0 0 26px}.panel{background:white;padding:27px 32px;border:1px solid #e3edf2;border-radius:12px;margin:22px 0;box-shadow:0 5px 20px rgba(11,41,69,.035)}h2{color:var(--ink);font-size:25px;line-height:1.4;margin:0 0 20px}h3{font-size:18px;color:#0f6976;margin:28px 0 12px;line-height:1.5}.idx{display:inline-block;color:var(--teal);font:700 12px/1 Arial,sans-serif;letter-spacing:1px;margin-right:9px}p{margin:10px 0}ul{padding-left:1.3em}li{margin:7px 0}strong{color:#13364b}table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0 20px}th,td{border-bottom:1px solid var(--line);text-align:left;vertical-align:top;padding:10px 12px}th{background:var(--wash);color:#1f5261}.section-kicker{color:#668292;font-size:12px;letter-spacing:1.3px;font-weight:700;text-transform:uppercase;margin:35px 0 8px}.callout{padding:16px 19px;background:#f0f8fa;border-radius:7px;border-left:4px solid #0d99a3}.tag{font-size:12px;font-weight:700;color:#0b7681;background:#e2f6f4;border-radius:30px;padding:4px 10px}footer{font-size:13px;color:#6d7b87;line-height:1.8;padding:0 24px 45px;max-width:900px;margin:auto}@media(max-width:650px){header{padding:46px 20px 40px}header p{font-size:17px}main{padding:19px 14px 40px}.panel{padding:22px 18px}table{font-size:12px}th,td{padding:8px 6px}h2{font-size:22px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="eyebrow">PRODUCT THINKING / AGENT CREATOR ECOSYSTEM</div>
+<h1>从足球训练指导到 AI Agent</h1>
+<p>如何把专业经验转化为可重复交付、可被验证的个性化服务</p>
+<div class="meta">熊文 · 岗位定制产品思考 · 2026.11 · 基于 Kick AI 原型与 8 年以上足球训练经历</div>
+<nav class="nav"><a href="#service">服务场景</a><a href="#flow">MVP 流程</a><a href="#platform">平台能力</a><a href="#test">验证计划</a><a href="https://kodiak-10.github.io/kick/kick-ai/">Kick AI 演示</a></nav>
+</div></header>
+<main>
+<div class="note"><strong>阅读说明：</strong>这是一份面向 AI Agent 创作者生态相关岗位的独立产品构想。Kick AI 已有原型实践；创作者服务工作台、商业化、用户试点与下文验证计划均为<strong>拟议方案，尚未上线或验证</strong>。</div>
+<div class="panel" id="service">
+<div class="section-kicker">01 / Service Opportunity</div><h2>选择的服务：足球技术动作反馈</h2>
+<p>在足球训练中，专业反馈依赖教练观察、动作示范和反复纠错。我的八年以上训练经历使我熟悉这种服务过程；Kick AI 尝试以单机位视频连接动作阶段与反馈报告。</p>
+<table><thead><tr><th>对象</th><th>想完成的任务</th><th>待验证的困难</th></tr></thead><tbody>
+<tr><td>训练者 / 家长</td><td>上传一次练习，明确最先要改的动作</td><td>难以方便获得及时、可复看的结构化反馈</td></tr>
+<tr><td>足球教练 / 创作者</td><td>标准化高频反馈并持续提供服务</td><td>重复解释相似问题，服务规模受时间限制</td></tr></tbody></table>
+<h3><span class="idx">02</span>为什么适合探索 Agent 化</h3>
+<ul><li><strong>可标准化：</strong>目标、常见问题、练习建议及复测方式可以沉淀为服务模板。</li>
+<li><strong>必须个性化：</strong>建议要考虑用户目标、训练频率、当前动作和场地条件。</li>
+<li><strong>需要人工兜底：</strong>动作识别不足或涉及伤痛时，模型不应给出确定性判断。</li></ul>
+<h3><span class="idx">03</span>核心取舍：先辅助，再自动化</h3>
+<div class="callout"><strong>先做「教练可审阅的反馈草稿」，再讨论「自动交付的 Agent」。</strong><br>视频识别质量是上游约束。再流畅的文案也不能弥补错误的动作判断。</div>
+<p>首版闭环设为：<strong>教练输入经验 → AI 按模板辅助生成 → 教练纠正 → 用户复测</strong>。暂不承诺完全自动诊断或动作评分准确率。</p>
+</div>
+<div class="panel" id="flow">
+<div class="section-kicker">02 / Creator-in-the-loop</div><h2>一个可检验的创作者 Agent MVP</h2>
+<p>先验证服务质量，再提高自动化程度。</p>
+<table><thead><tr><th>阶段</th><th>创作者（教练）</th><th>服务用户（训练者）</th></tr></thead><tbody>
+<tr><td>1 · 配置</td><td>录入服务范围、问题模板与安全边界</td><td>选择技术动作及训练目标</td></tr>
+<tr><td>2 · 收集</td><td>提供可复核的示例与验收标准</td><td>上传单段视频或训练记录并授权使用</td></tr>
+<tr><td>3 · 生成</td><td>核对动作证据、定位与练习建议</td><td>看到分阶段反馈和最优先的 1–2 项问题</td></tr>
+<tr><td>4 · 复核</td><td>低置信度或风险建议由人工确认</td><td>重录、补充输入或请求人工反馈</td></tr>
+<tr><td>5 · 复测</td><td>依据高频错误修订知识卡与模板</td><td>再次提交相同动作，对照训练目标</td></tr></tbody></table>
+<h3><span class="idx">05</span>服务输出的验收结构</h3>
+<ul><li><strong>输入：</strong>练习类型、目标、单段视频 / 动作记录、场地器材。</li>
+<li><strong>证据：</strong>对应视频片段、动作阶段及观察依据；缺失证据时明确「无法判断」。</li>
+<li><strong>建议：</strong>只给优先的 1–2 项，附原因、操作方式与复测标准。</li>
+<li><strong>边界：</strong>疑似伤害、危险动作、未成年人隐私或识别失败，应停止自动判断并转人工。</li></ul>
+<h3><span class="idx">06</span>规则与模型的责任分工</h3>
+<table><thead><tr><th>规则 / 人工决定</th><th>模型辅助处理</th></tr></thead><tbody>
+<tr><td>上传限制、隐私同意、任务状态、风险词拦截</td><td>把教练经验整理为结构化知识卡</td></tr>
+<tr><td>检测不足时重新上传 / 转人工</td><td>依核验的观察结果生成通俗反馈</td></tr>
+<tr><td>教练修订、确认发布与版本控制</td><td>按用户目标改写练习说明及跟进话术</td></tr>
+</tbody></table>
+<p><strong>判断依据：</strong>模型适合解释和表达，动作判断需要可追溯证据；服务边界、隐私、风险处置不应完全交给自由生成。</p>
+</div>
+<div class="panel" id="platform">
+<div class="section-kicker">03 / Platform Capabilities</div><h2>从服务闭环反推平台能力</h2>
+<table><thead><tr><th>能力</th><th>要解决的创作者问题</th><th>优先级</th></tr></thead><tbody>
+<tr><td>知识 / 服务模板</td><td>难将经验转换为 Agent 可执行步骤</td><td><span class="tag">P0</span></td></tr>
+<tr><td>调试与坏例库</td><td>回答看似合理但不符合专业标准</td><td><span class="tag">P0</span></td></tr>
+<tr><td>人工审核 / 版本管理</td><td>纠正后如何稳定更新后续服务</td><td><span class="tag">P0</span></td></tr>
+<tr><td>任务记录与复测</td><td>如何确认用户确实完成后续任务</td><td>P1</td></tr>
+<tr><td>服务页与分发</td><td>如何展示边界、建立信任并引导试用</td><td>P1</td></tr></tbody></table>
+</div>
+<div class="panel" id="test">
+<div class="section-kicker">04 / Validation Plan</div><h2>先小规模试错，再判断扩展条件</h2>
+<p><strong>计划（未执行）：</strong>招募 2–3 名有真实指导经验的教练和 5–10 名训练者，统一任务脚本测试首版服务。这是拟议样本，不代表已有测试结果。</p>
+<ul><li><strong>创作者可用性：</strong>首版服务配置完成率、配置耗时、反复修改节点。</li>
+<li><strong>反馈质量：</strong>由教练逐项判断「证据可追溯 / 问题成立 / 建议可执行」的通过比例。</li>
+<li><strong>用户任务：</strong>有效任务完成率、重录率、转人工率、复测率。</li>
+<li><strong>风险成本：</strong>单次处理耗时、模型调用成本、不安全建议比例；严重安全错误立即回退人工。</li></ul>
+<h3><span class="idx">09</span>数据会如何改变决策</h3>
+<p>若教练反复改写同类建议，优先修订知识结构和模板；若错误来自视频识别，优先补充证据或缩窄动作范围；若用户不愿复测，检查反馈是否足够具体、任务是否过重。</p>
+<div class="callout"><strong>希望验证的核心假设：</strong>帮助专业人士以较低成本把经验组织成「可测试、可纠错、可交付」的 Agent 服务，可能比增加预置功能更有价值。具体成效需要创作者与用户共同验证。</div>
+</div>
+<div class="panel"><div class="section-kicker">Evidence & Links</div><h2>相关项目与证据</h2><p>Kick AI：<a href="https://kodiak-10.github.io/kick/kick-ai/">可交互演示</a> · <a href="https://github.com/kodiak-10/kick">项目代码仓库</a></p><p>RolePath：<a href="https://rolepath-kodiak.streamlit.app/">应用演示</a> · <a href="https://github.com/kodiak-10/rolepath">项目代码</a></p></div>
+</main><footer>© 2026 熊文 · 独立岗位研究材料。本文为候选人提出的产品构想，不代表小红书已推出相关产品，也不声称已完成创作者试点、用户增长或商业化验证。</footer>
+</body></html>
