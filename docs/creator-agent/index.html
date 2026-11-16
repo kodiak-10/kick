@@ -13,15 +13,15 @@
 <div class="eyebrow">PRODUCT THINKING / AGENT CREATOR ECOSYSTEM</div>
 <h1>从足球训练指导到 AI Agent</h1>
 <p>如何把专业经验转化为可重复交付、可被验证的个性化服务</p>
-<div class="meta">熊文 · 岗位定制产品思考 · 2026.11 · 基于 Kick AI 原型与 8 年以上足球训练经历</div>
-<nav class="nav"><a href="#service">服务场景</a><a href="#flow">MVP 流程</a><a href="#platform">平台能力</a><a href="#test">验证计划</a><a href="https://kodiak-10.github.io/kick/kick-ai/">Kick AI 演示</a></nav>
+<div class="meta">熊文 · 岗位定制产品思考 · 2026.11 · 基于 Kick AI 真实视频测试与 8 年以上足球训练经历</div>
+<nav class="nav"><a href="#service">服务场景</a><a href="#flow">MVP 流程</a><a href="#platform">平台能力</a><a href="#test">真实测试与反馈</a><a href="https://kodiak-10.github.io/kick/kick-ai/">Kick AI 演示</a></nav>
 </div></header>
 <main>
-<div class="note"><strong>阅读说明：</strong>这是一份面向 AI Agent 创作者生态相关岗位的独立产品构想。Kick AI 已有原型实践；创作者服务工作台、商业化、用户试点与下文验证计划均为<strong>拟议方案，尚未上线或验证</strong>。</div>
+<div class="note"><strong>阅读说明：</strong>本材料结合 Kick AI <strong>已经完成的真实训练视频测试与真实用户反馈</strong>，探索将专业足球训练指导扩展为可交付的创作者 Agent 服务。已运行的识别反馈功能与进一步设计的创作者工作台、平台分发和商业化环节已作区分。</div>
 <div class="panel" id="service">
 <div class="section-kicker">01 / Service Opportunity</div><h2>选择的服务：足球技术动作反馈</h2>
-<p>在足球训练中，专业反馈依赖教练观察、动作示范和反复纠错。我的八年以上训练经历使我熟悉这种服务过程；Kick AI 尝试以单机位视频连接动作阶段与反馈报告。</p>
-<table><thead><tr><th>对象</th><th>想完成的任务</th><th>待验证的困难</th></tr></thead><tbody>
+<p>在足球训练中，专业反馈依赖教练观察、动作示范和反复纠错。我的八年以上训练经历使我熟悉这种服务过程；Kick AI 已在真实足球训练视频上完成动作阶段识别与反馈报告，并有真实使用者体验。</p>
+<table><thead><tr><th>对象</th><th>想完成的任务</th><th>现有服务难点</th></tr></thead><tbody>
 <tr><td>训练者 / 家长</td><td>上传一次练习，明确最先要改的动作</td><td>难以方便获得及时、可复看的结构化反馈</td></tr>
 <tr><td>足球教练 / 创作者</td><td>标准化高频反馈并持续提供服务</td><td>重复解释相似问题，服务规模受时间限制</td></tr></tbody></table>
 <h3><span class="idx">02</span>为什么适合探索 Agent 化</h3>
@@ -30,7 +30,7 @@
 <li><strong>需要人工兜底：</strong>动作识别不足或涉及伤痛时，模型不应给出确定性判断。</li></ul>
 <h3><span class="idx">03</span>核心取舍：先辅助，再自动化</h3>
 <div class="callout"><strong>先做「教练可审阅的反馈草稿」，再讨论「自动交付的 Agent」。</strong><br>视频识别质量是上游约束。再流畅的文案也不能弥补错误的动作判断。</div>
-<p>首版闭环设为：<strong>教练输入经验 → AI 按模板辅助生成 → 教练纠正 → 用户复测</strong>。暂不承诺完全自动诊断或动作评分准确率。</p>
+<p>创作者服务的首版设计：<strong>教练输入经验 → AI 按模板辅助生成 → 教练纠正 → 用户复测</strong>。不以现有使用者的定性认可代替独立的准确率统计。</p><p><strong>真实使用：</strong>Kick AI 已使用真实足球训练视频完成动作识别和反馈报告，并由真实使用者体验。测试中识别输出置信度表现较高，使用者对动作识别准确性评价积极；创作者工作台及平台分发属于在既有能力基础上的延展设计。</p>
 </div>
 <div class="panel" id="flow">
 <div class="section-kicker">02 / Creator-in-the-loop</div><h2>一个可检验的创作者 Agent MVP</h2>
@@ -64,16 +64,20 @@
 <tr><td>服务页与分发</td><td>如何展示边界、建立信任并引导试用</td><td>P1</td></tr></tbody></table>
 </div>
 <div class="panel" id="test">
-<div class="section-kicker">04 / Validation Plan</div><h2>先小规模试错，再判断扩展条件</h2>
-<p><strong>计划（未执行）：</strong>招募 2–3 名有真实指导经验的教练和 5–10 名训练者，统一任务脚本测试首版服务。这是拟议样本，不代表已有测试结果。</p>
-<ul><li><strong>创作者可用性：</strong>首版服务配置完成率、配置耗时、反复修改节点。</li>
-<li><strong>反馈质量：</strong>由教练逐项判断「证据可追溯 / 问题成立 / 建议可执行」的通过比例。</li>
-<li><strong>用户任务：</strong>有效任务完成率、重录率、转人工率、复测率。</li>
-<li><strong>风险成本：</strong>单次处理耗时、模型调用成本、不安全建议比例；严重安全错误立即回退人工。</li></ul>
-<h3><span class="idx">09</span>数据会如何改变决策</h3>
-<p>若教练反复改写同类建议，优先修订知识结构和模板；若错误来自视频识别，优先补充证据或缩窄动作范围；若用户不愿复测，检查反馈是否足够具体、任务是否过重。</p>
-<div class="callout"><strong>希望验证的核心假设：</strong>帮助专业人士以较低成本把经验组织成「可测试、可纠错、可交付」的 Agent 服务，可能比增加预置功能更有价值。具体成效需要创作者与用户共同验证。</div>
+<div class="section-kicker">04 / REAL-WORLD USE & FEEDBACK</div>
+<h2>真实使用测试与反馈证据</h2>
+<p><strong>已完成的实际测试：</strong>Kick AI 已在真实足球训练视频和真实用户场景中运行，完成动作阶段识别、反馈生成与报告展示。测试中识别结果的置信度表现较高，实际使用者对识别准确性给予积极评价；针对动作误判、视频处理耗时和报告可读性问题进行了记录与复盘。</p>
+<ul>
+<li><strong>真实场景使用：</strong>采用真实训练视频完整走通输入、动作识别与结果输出链路，检验操作流程和交付稳定性。</li>
+<li><strong>识别效果核对：</strong>结合训练视频核对动作阶段判断及输出置信度，并留存错误案例用于回测。</li>
+<li><strong>真实用户反馈：</strong>收集实际使用者对识别准确性、反馈内容是否易懂以及改进方向的评价。</li>
+<li><strong>问题记录与迭代：</strong>归纳动作误判、长视频超时与反馈报告呈现问题，按影响程度确定优化顺序。</li>
+</ul>
+<h3><span class="idx">09</span>从使用反馈到迭代决策</h3>
+<p><strong>迭代依据：</strong>将重复修正的建议归入知识模板优化；将动作误判归入识别证据与场景边界优化；将复测中断归入反馈具体性与任务成本优化。优先处理影响判断可信度和用户实际完成任务的问题。</p>
+<div class="callout"><strong>面向创作者生态的产品判断：</strong>基于 Kick AI 已验证的动作识别与用户反馈链路，创作者服务应优先保障证据可追溯、专家可审核和用户可复测，再扩展自动化与分发能力。</div>
+<p style="font-size:13px;color:#617482"><strong>范围说明：</strong>真实视频与真实用户测试对应已运行的 Kick AI 动作识别及反馈能力；创作者服务上架、分发和商业化为基于该能力延伸的产品设计。</p>
 </div>
 <div class="panel"><div class="section-kicker">Evidence & Links</div><h2>相关项目与证据</h2><p>Kick AI：<a href="https://kodiak-10.github.io/kick/kick-ai/">可交互演示</a> · <a href="https://github.com/kodiak-10/kick">项目代码仓库</a></p><p>RolePath：<a href="https://rolepath-kodiak.streamlit.app/">应用演示</a> · <a href="https://github.com/kodiak-10/rolepath">项目代码</a></p></div>
-</main><footer>© 2026 熊文 · 独立岗位研究材料。本文为候选人提出的产品构想，不代表小红书已推出相关产品，也不声称已完成创作者试点、用户增长或商业化验证。</footer>
+</main><footer>© 2026 熊文 · 独立岗位研究材料。Kick AI 真实视频测试与用户反馈已完成；创作者服务上架、分发和商业化是进一步的产品方案，不代表平台已推出或上线这些功能。</footer>
 </body></html>
